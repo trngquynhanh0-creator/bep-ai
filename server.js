@@ -306,7 +306,7 @@ function demoRecommendations(body) {
   return {
     needs_clarification: false,
     clarification_questions: [],
-    summary: `BẾP AI đang ở chế độ mô phỏng. Mình đã phân tích ${ingredients.length} nguyên liệu bạn nhập và chọn món phù hợp.`,
+    summary: "BẾP AI đang ở chế độ mô phỏng. Mình đã phân tích nguyên liệu bạn nhập và chọn món phù hợp.",
     recipes: recipes.slice(0, 3)
   };
 }
