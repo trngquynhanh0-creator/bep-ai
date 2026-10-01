@@ -21,7 +21,7 @@ const client = process.env.OPENAI_API_KEY
   : null;
 
 const SYSTEM = `
-Bạn là BẾP AI, trợ lý nấu ăn cá nhân hóa dành cho người Việt, đặc biệt là học sinh,
+Bạn là ECOMEAL AI, trợ lý nấu ăn cá nhân hóa dành cho người Việt, đặc biệt là học sinh,
 sinh viên, người sống một mình và người mới bắt đầu nấu ăn.
 
 Mục tiêu:
@@ -298,14 +298,14 @@ function demoRecommendations(body) {
       kcal_is_estimate: true,
       ingredients_have: ingredients,
       ingredients_buy: ["dầu ăn và gia vị cơ bản nếu chưa có"],
-      why_fit: "BẾP AI chưa nhận diện được món cụ thể nên đề xuất cách xào đơn giản để tận dụng nguyên liệu bạn có."
+      why_fit: "ECOMEAL AI chưa nhận diện được món cụ thể nên đề xuất cách xào đơn giản để tận dụng nguyên liệu bạn có."
     });
   }
 
   return {
     needs_clarification: false,
     clarification_questions: [],
-    summary: "BẾP AI đang ở chế độ mô phỏng. Mình đã phân tích nguyên liệu bạn nhập và chọn món phù hợp.",
+    summary: "ECOMEAL AI đang ở chế độ mô phỏng. Mình đã phân tích nguyên liệu bạn nhập và chọn món phù hợp.",
     recipes: recipes.slice(0, 3)
   };
 }
@@ -393,7 +393,7 @@ Yêu cầu:
     if (err.message === "MISSING_API_KEY") {
       return res.status(503).json({ error: "Server chưa có OPENAI_API_KEY. Hãy cấu hình biến môi trường." });
     }
-    res.status(500).json({ error: "BẾP AI gặp lỗi khi tạo gợi ý. Hãy thử lại." });
+    res.status(500).json({ error: "ECOMEAL AI gặp lỗi khi tạo gợi ý. Hãy thử lại." });
   }
 });
 
@@ -463,6 +463,6 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`BẾP AI đang chạy tại http://localhost:${PORT}`);
+  console.log(`ECOMEAL AI đang chạy tại http://localhost:${PORT}`);
   console.log(`AI: ${client ? "ĐÃ KẾT NỐI" : "DEMO - chưa có OPENAI_API_KEY"}`);
 });
