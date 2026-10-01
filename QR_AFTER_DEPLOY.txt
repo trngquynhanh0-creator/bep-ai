@@ -1,0 +1,2 @@
+Sau khi deploy và có URL HTTPS, tạo QR bằng chính URL đó. Không dùng QR localhost cho BGK ở ngoài máy bạn.
+Ví dụ: https://bep-ai.example.com/
