@@ -118,49 +118,200 @@ function cleanStringArray(value) {
   return value.map(x => String(x).trim()).filter(Boolean).slice(0, 30);
 }
 
+```js
 function demoRecommendations(body) {
   const servings = Number(body.servings) || 2;
+
+  const ingredients = cleanStringArray(body.ingredients)
+    .map(x => x.toLowerCase());
+
+  const has = (...words) =>
+    words.some(word =>
+      ingredients.some(item => item.includes(word))
+    );
+
+  const recipes = [];
+
+  // 🍳 TRỨNG + CÀ CHUA
+  if (has("trứng") && has("cà chua", "cà chua")) {
+    recipes.push({
+      name: "Trứng sốt cà chua",
+      difficulty: "Rất dễ",
+      time_minutes: 15,
+      servings,
+      kcal_estimate_per_serving: 300,
+      kcal_is_estimate: true,
+      ingredients_have: ["trứng", "cà chua"],
+      ingredients_buy: has("hành") ? [] : ["hành lá nếu muốn"],
+      why_fit: "Tận dụng trứng và cà chua bạn đang có, nhanh và rất phù hợp cho người mới."
+    });
+  }
+
+  // 🍗 GÀ
+  if (has("gà", "thịt gà")) {
+    recipes.push({
+      name: has("sả") ? "Gà xào sả" : "Gà xào hành",
+      difficulty: "Dễ",
+      time_minutes: 25,
+      servings,
+      kcal_estimate_per_serving: 350,
+      kcal_is_estimate: true,
+      ingredients_have: ingredients.filter(x =>
+        ["gà", "thịt gà", "sả", "hành", "ớt"].some(k => x.includes(k))
+      ),
+      ingredients_buy: has("sả")
+        ? ["dầu ăn, nước mắm, tiêu nếu chưa có"]
+        : ["hành, dầu ăn, nước mắm, tiêu nếu chưa có"],
+      why_fit: "Thịt gà dễ chế biến và có thể điều chỉnh gia vị theo khẩu vị."
+    });
+  }
+
+  // 🥚 TRỨNG
+  if (has("trứng") && !has("cà chua")) {
+    recipes.push({
+      name: "Trứng chiên hành",
+      difficulty: "Rất dễ",
+      time_minutes: 10,
+      servings,
+      kcal_estimate_per_serving: 250,
+      kcal_is_estimate: true,
+      ingredients_have: ["trứng"].concat(
+        has("hành") ? ["hành"] : []
+      ),
+      ingredients_buy: has("hành")
+        ? []
+        : ["hành lá nếu muốn"],
+      why_fit: "Cực kỳ nhanh, ít nguyên liệu và phù hợp cho người mới bắt đầu."
+    });
+  }
+
+  // 🥔 KHOAI TÂY
+  if (has("khoai tây")) {
+    recipes.push({
+      name: has("gà", "thịt gà")
+        ? "Gà xào khoai tây"
+        : "Khoai tây xào",
+      difficulty: "Dễ",
+      time_minutes: 25,
+      servings,
+      kcal_estimate_per_serving: 300,
+      kcal_is_estimate: true,
+      ingredients_have: ingredients.filter(x =>
+        ["khoai tây", "gà", "thịt gà", "hành"].some(k => x.includes(k))
+      ),
+      ingredients_buy: ["dầu ăn và gia vị cơ bản nếu chưa có"],
+      why_fit: "Khoai tây dễ kết hợp với nhiều nguyên liệu và không yêu cầu kỹ thuật phức tạp."
+    });
+  }
+
+  // 🥬 RAU + ĐẬU PHỤ
+  if (has("rau", "cải", "rau cải") && has("đậu phụ", "đậu hũ")) {
+    recipes.push({
+      name: "Đậu phụ xào rau cải",
+      difficulty: "Dễ",
+      time_minutes: 20,
+      servings,
+      kcal_estimate_per_serving: 250,
+      kcal_is_estimate: true,
+      ingredients_have: ["rau cải", "đậu phụ"],
+      ingredients_buy: [],
+      why_fit: "Tận dụng nguyên liệu sẵn có, ít dầu và dễ thực hiện."
+    });
+  }
+
+  // 🍜 MÌ
+  if (has("mì", "mỳ")) {
+    recipes.push({
+      name: has("trứng")
+        ? "Mì xào trứng"
+        : "Mì xào rau củ",
+      difficulty: "Rất dễ",
+      time_minutes: 15,
+      servings,
+      kcal_estimate_per_serving: 350,
+      kcal_is_estimate: true,
+      ingredients_have: ingredients.filter(x =>
+        ["mì", "mỳ", "trứng", "rau", "cải", "cà rốt"].some(k => x.includes(k))
+      ),
+      ingredients_buy: ["dầu ăn và gia vị nếu chưa có"],
+      why_fit: "Nhanh, dễ biến tấu và phù hợp khi cần một bữa ăn đơn giản."
+    });
+  }
+
+  // 🐟 CÁ
+  if (has("cá")) {
+    recipes.push({
+      name: "Cá chiên",
+      difficulty: "Dễ",
+      time_minutes: 20,
+      servings,
+      kcal_estimate_per_serving: 320,
+      kcal_is_estimate: true,
+      ingredients_have: ["cá"],
+      ingredients_buy: ["dầu ăn và gia vị cơ bản nếu chưa có"],
+      why_fit: "Cách chế biến đơn giản, phù hợp cho người mới học nấu ăn."
+    });
+  }
+
+  // 🥕 RAU CỦ
+  if (
+    has("cà rốt", "bí", "bắp cải", "rau", "cải") &&
+    recipes.length === 0
+  ) {
+    recipes.push({
+      name: "Rau củ xào",
+      difficulty: "Rất dễ",
+      time_minutes: 15,
+      servings,
+      kcal_estimate_per_serving: 180,
+      kcal_is_estimate: true,
+      ingredients_have: ingredients,
+      ingredients_buy: ["dầu ăn và gia vị nếu chưa có"],
+      why_fit: "Có thể tận dụng các loại rau củ đang có và chế biến nhanh."
+    });
+  }
+
+  // 🍚 CƠM + NGUYÊN LIỆU KHÁC
+  if (has("cơm") && recipes.length === 0) {
+    recipes.push({
+      name: has("trứng")
+        ? "Cơm chiên trứng"
+        : "Cơm chiên rau củ",
+      difficulty: "Dễ",
+      time_minutes: 15,
+      servings,
+      kcal_estimate_per_serving: 350,
+      kcal_is_estimate: true,
+      ingredients_have: ingredients,
+      ingredients_buy: ["dầu ăn và gia vị nếu chưa có"],
+      why_fit: "Tận dụng cơm có sẵn và các nguyên liệu còn lại trong bếp."
+    });
+  }
+
+  // Nếu chưa nhận diện được nguyên liệu
+  if (recipes.length === 0) {
+    recipes.push({
+      name: "Món xào tổng hợp",
+      difficulty: "Dễ",
+      time_minutes: 20,
+      servings,
+      kcal_estimate_per_serving: 250,
+      kcal_is_estimate: true,
+      ingredients_have: ingredients,
+      ingredients_buy: ["dầu ăn và gia vị cơ bản nếu chưa có"],
+      why_fit: "BẾP AI chưa nhận diện được món cụ thể nên đề xuất cách xào đơn giản để tận dụng nguyên liệu bạn có."
+    });
+  }
+
   return {
     needs_clarification: false,
     clarification_questions: [],
-    summary: "Đây là chế độ demo cục bộ. Khi có OPENAI_API_KEY, BẾP AI sẽ dùng AI thật để tạo món.",
-    recipes: [
-      {
-        name: "Trứng sốt cà chua",
-        difficulty: "Rất dễ",
-        time_minutes: 15,
-        servings,
-        kcal_estimate_per_serving: 300,
-        kcal_is_estimate: true,
-        ingredients_have: ["trứng", "cà chua"],
-        ingredients_buy: ["hành lá nếu có"],
-        why_fit: "Nhanh, ít kỹ thuật và phù hợp cho người mới."
-      },
-      {
-        name: "Canh rau cải đậu phụ",
-        difficulty: "Rất dễ",
-        time_minutes: 15,
-        servings,
-        kcal_estimate_per_serving: 150,
-        kcal_is_estimate: true,
-        ingredients_have: ["rau cải", "đậu phụ"],
-        ingredients_buy: [],
-        why_fit: "Ít dầu, dễ nấu và tận dụng nguyên liệu sẵn có."
-      },
-      {
-        name: "Đậu phụ xào rau cải",
-        difficulty: "Dễ",
-        time_minutes: 20,
-        servings,
-        kcal_estimate_per_serving: 250,
-        kcal_is_estimate: true,
-        ingredients_have: ["đậu phụ", "rau cải"],
-        ingredients_buy: ["dầu ăn, muối, tiêu nếu chưa có"],
-        why_fit: "Đơn giản, dễ điều chỉnh lượng dầu và khẩu phần."
-      }
-    ]
+    summary:
+      `BẾP AI đang ở chế độ mô phỏng. Mình đã phân tích ${ingredients.length} nguyên liệu bạn nhập và chọn món phù hợp.`,
+    recipes: recipes.slice(0, 3)
   };
 }
+```
 
 function demoCook(body) {
   const steps = [
