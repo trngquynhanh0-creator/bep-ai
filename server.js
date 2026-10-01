@@ -309,7 +309,6 @@ function demoRecommendations(body) {
     recipes: recipes.slice(0, 3)
   };
 }
-```
 
 function demoCook(body) {
   const steps = [
