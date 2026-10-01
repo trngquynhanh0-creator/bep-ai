@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#16794b">
+<title>BẾP AI — AI thật</title>
+<style>
+:root{--g:#16794b;--g2:#0f633d;--bg:#f5fbf7;--txt:#173328;--mut:#64756c;--line:#dfebe4;--white:#fff;--cream:#fff7df}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:var(--txt)}
+.app{max-width:560px;min-height:100vh;margin:auto;background:#fff;box-shadow:0 0 40px #0000000a}
+header{position:sticky;top:0;z-index:10;padding:12px 18px;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--g)}.logo{width:40px;height:40px;border-radius:13px;background:#edf8f1;display:grid;place-items:center;font-size:24px}
+main{padding-bottom:90px}.screen{display:none;padding:22px 18px}.screen.active{display:block}
+h1{font-size:31px;line-height:1.12;margin:18px 0 10px}h2{font-size:23px;margin:8px 0 10px}h3{margin:0 0 7px}p{line-height:1.55}.muted{color:var(--mut)}
+.hero{margin-top:10px;padding:24px 20px;border-radius:28px;background:linear-gradient(135deg,#eaf8ef,#fff3da)}.heroart{text-align:center;font-size:68px}
+button,input,select{font:inherit}.primary,.secondary{width:100%;padding:14px 16px;border-radius:16px;font-weight:800}.primary{border:0;background:var(--g);color:#fff}.secondary{border:1px solid var(--line);background:#fff;color:var(--g)}
+.input{width:100%;padding:14px;border:1px solid var(--line);border-radius:14px;outline:0;background:#fff}.input:focus{border-color:var(--g)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.chip{padding:9px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;font-weight:700}.chip.on{background:#edf8f1;color:var(--g);border-color:var(--g)}
+.progress{display:flex;gap:5px;margin:2px 0 20px}.dot{height:5px;flex:1;border-radius:8px;background:#e3ece7}.dot.on{background:var(--g)}
+.recipe{border:1px solid var(--line);border-radius:18px;padding:13px;margin:11px 0;box-shadow:0 4px 15px #00000008}.food{width:76px;height:76px;border-radius:15px;background:linear-gradient(135deg,#fff0cf,#e8f7ed);display:grid;place-items:center;font-size:40px;flex:none}.rtop{display:flex;gap:12px}.badges{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}.badge{font-size:12px;padding:5px 8px;background:#edf8f1;color:var(--g);border-radius:999px;font-weight:800}.choose{border:0;background:var(--g);color:#fff;padding:9px 12px;border-radius:11px;font-weight:800;margin-top:9px}
+.tip{padding:13px;border-radius:16px;background:var(--cream);margin:14px 0}.warn{padding:13px;border-radius:16px;background:#fff0f0;color:#7b3030;margin:14px 0}
+.detailimg,.stepimg{height:190px;border-radius:22px;background:linear-gradient(135deg,#e8f7ed,#fff0d0);display:grid;place-items:center;font-size:88px}.info{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}.ibox{background:#f7faf8;border-radius:14px;padding:11px;text-align:center}.ibox b{display:block}.ibox span{font-size:12px;color:var(--mut)}
+.back{border:0;background:transparent;color:var(--g);font-weight:800;padding:3px 0}.footer{text-align:center;color:var(--mut);font-size:12px;margin:16px 0}.status{font-size:12px;padding:7px 10px;border-radius:999px;background:#edf8f1;color:var(--g);display:inline-block;margin-top:8px}
+.bottom{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(560px,100%);padding:12px 18px;background:#ffffffef;border-top:1px solid var(--line);backdrop-filter:blur(12px);z-index:9}
+.row{display:flex;gap:9px}.row>*{flex:1}.hidden{display:none!important}.spinner{display:inline-block;width:16px;height:16px;border:2px solid #ffffff66;border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;vertical-align:-3px}@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="app">
+<header><div class="brand"><div class="logo">👨‍🍳</div><div>BẾP AI</div></div></header>
+<main>
+<section id="s1" class="screen active">
+  <div class="hero"><div class="heroart">🥗🍳🥦</div><h1>Có gì trong bếp,<br>AI giúp bạn nấu gì.</h1>
+  <p class="muted">Bản có AI thật: nhập nguyên liệu, chọn mục tiêu, BẾP AI tự tạo món và hướng dẫn bạn nấu từng bước.</p>
+  <button class="primary" onclick="go(2)">Bắt đầu ngay →</button><div id="status" class="status">Đang kiểm tra kết nối AI...</div></div>
+  <div class="tip">🔐 API key được giữ ở máy chủ, không gửi vào trình duyệt.</div>
+  <div class="footer">Bản MVP phục vụ thử nghiệm cuộc thi · Kcal chỉ là ước tính.</div>
+</section>
+
+<section id="s2" class="screen">
+<button class="back" onclick="go(1)">← Quay lại</button><div class="progress"><i class="dot on"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+<h2>🥕 Bạn đang có gì trong bếp?</h2><p class="muted">Nhập các nguyên liệu, ngăn cách bằng dấu phẩy.</p>
+<input id="ingredients" class="input" value="trứng, cà chua, rau cải, đậu phụ" placeholder="Ví dụ: trứng, cà chua, rau cải...">
+<div class="chips"><button class="chip" onclick="add('trứng')">🥚 Trứng</button><button class="chip" onclick="add('cà chua')">🍅 Cà chua</button><button class="chip" onclick="add('rau cải')">🥬 Rau cải</button><button class="chip" onclick="add('đậu phụ')">🧈 Đậu phụ</button><button class="chip" onclick="add('thịt gà')">🍗 Thịt gà</button></div>
+<button class="primary" onclick="go(3)">Tiếp tục →</button>
+</section>
+
+<section id="s3" class="screen">
+<button class="back" onclick="go(2)">← Quay lại</button><div class="progress"><i class="dot on"></i><i class="dot on"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+<h2>🎯 Bạn muốn ăn như thế nào?</h2><p class="muted">Chọn một hoặc nhiều mục.</p>
+<div class="chips" id="goals">
+<button class="chip on" data-v="Người mới nấu">👨‍🍳 Người mới</button><button class="chip" data-v="Ăn chay">🌱 Ăn chay</button><button class="chip" data-v="Ăn mặn">🍖 Ăn mặn</button><button class="chip" data-v="Ít năng lượng">🔥 Ít năng lượng</button><button class="chip" data-v="Tiết kiệm">💰 Tiết kiệm</button><button class="chip" data-v="Nhanh dưới 15 phút">⚡ Dưới 15 phút</button>
+</div>
+<label class="muted">Số người</label><select id="servings" class="input"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option></select>
+<br><br><label class="muted">Thời gian tối đa</label><select id="time" class="input"><option value="0">Không giới hạn</option><option value="15">15 phút</option><option value="20">20 phút</option><option value="30">30 phút</option></select>
+<br><br><label class="muted">Ngân sách (VNĐ, tùy chọn)</label><input id="budget" class="input" type="number" placeholder="Ví dụ: 50000">
+<br><br><button id="findBtn" class="primary" onclick="recommend()">✨ BẾP AI tìm món</button>
+</section>
+
+<section id="s4" class="screen">
+<button class="back" onclick="go(3)">← Điều chỉnh</button><div class="progress"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot"></i><i class="dot"></i></div>
+<h2>🍲 Món AI đề xuất</h2><p id="summary" class="muted"></p><div id="recipes"></div>
+</section>
+
+<section id="s5" class="screen">
+<button class="back" onclick="go(4)">← Danh sách món</button><div class="progress"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot"></i></div>
+<div id="detail"></div>
+</section>
+
+<section id="s6" class="screen">
+<button class="back" onclick="go(5)">← Công thức</button><div class="progress"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i></div>
+<h2>👨‍🍳 Cùng tôi nấu</h2><div id="step"></div>
+<div class="row"><button class="secondary" onclick="prevStep()">← Trước</button><button class="primary" id="nextBtn" onclick="nextStep()">Tôi đã làm xong →</button></div>
+<div class="tip"><b>Gặp sự cố?</b><br><input id="problem" class="input" placeholder="Ví dụ: mình lỡ cho quá nhiều muối"><button class="secondary" style="margin-top:8px" onclick="troubleshoot()">🛟 Giúp mình xử lý</button><div id="help" style="margin-top:8px"></div></div>
+</section>
+</main>
+<div class="bottom"><button class="secondary" onclick="go(1)">🏠 Bắt đầu lại</button></div>
+</div>
+<script>
+const state={recipe:null,step:1,total:0,stepsCache:{}};
+const $=id=>document.getElementById(id);
+function go(n){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));$('s'+n).classList.add('active');scrollTo({top:0,behavior:'smooth'})}
+function add(x){const a=$('ingredients').value.split(',').map(s=>s.trim()).filter(Boolean);if(!a.includes(x))a.push(x);$('ingredients').value=a.join(', ')}
+document.querySelectorAll('#goals .chip').forEach(b=>b.onclick=()=>b.classList.toggle('on'));
+async function api(url,data){
+ const r=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+ const j=await r.json();if(!r.ok)throw new Error(j.error||'Lỗi máy chủ');return j;
+}
+async function health(){try{const r=await fetch('/api/health');const j=await r.json();$('status').textContent=j.ai_configured?'🤖 AI thật đã kết nối':'🧪 Demo — chưa cấu hình API key';}catch{$('status').textContent='⚠️ Chưa kết nối máy chủ';}}
+health();
+function goals(){return [...document.querySelectorAll('#goals .chip.on')].map(x=>x.dataset.v)}
+async function recommend(){
+ const btn=$('findBtn');btn.disabled=true;btn.innerHTML='<span class="spinner"></span> AI đang suy nghĩ...';
+ try{
+  const ingredients=$('ingredients').value.split(',').map(s=>s.trim()).filter(Boolean);
+  const data=await api('/api/recommend',{ingredients,goals:goals(),diet:goals().includes('Ăn chay')?'Ăn chay':goals().includes('Ăn mặn')?'Ăn mặn':'Không yêu cầu',servings:Number($('servings').value),time_limit_minutes:Number($('time').value),budget_vnd:Number($('budget').value)||0,skill:goals().includes('Người mới nấu')?'Người mới nấu':'Cơ bản'});
+  $('summary').textContent=data.summary+(data.source==='openai'?' · 🤖 AI thật':' · 🧪 Demo');
+  if(data.needs_clarification){$('recipes').innerHTML='<div class="tip"><b>BẾP AI cần thêm thông tin:</b><ul>'+data.clarification_questions.map(q=>'<li>'+esc(q)+'</li>').join('')+'</ul></div>';go(4);return}
+  window._recipes=data.recipes||[];
+  $('recipes').innerHTML=window._recipes.map((r,i)=>`<div class="recipe"><div class="rtop"><div class="food">${emoji(r.name)}</div><div><h3>${esc(r.name)}</h3><div class="muted">${esc(r.why_fit)}</div><div class="badges"><span class="badge">⏱ ${r.time_minutes} phút</span><span class="badge">⭐ ${esc(r.difficulty)}</span><span class="badge">~${r.kcal_estimate_per_serving} kcal*</span></div></div></div><button class="choose" onclick="detail(${i})">Chọn món →</button></div>`).join('');
+  go(4);
+ }catch(e){alert(e.message)}finally{btn.disabled=false;btn.textContent='✨ BẾP AI tìm món'}
+}
+function emoji(n){n=n.toLowerCase();if(n.includes('canh'))return'🥣';if(n.includes('trứng'))return'🍳';if(n.includes('đậu'))return'🥢';if(n.includes('gà'))return'🍗';if(n.includes('rau'))return'🥬';return'🍲'}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function detail(i){state.recipe=window._recipes[i];const r=state.recipe;$('detail').innerHTML=`<div class="detailimg">${emoji(r.name)}</div><h2>${esc(r.name)}</h2><p class="muted">${esc(r.why_fit)}</p><div class="info"><div class="ibox"><b>${r.time_minutes} phút</b><span>Thời gian</span></div><div class="ibox"><b>${esc(r.difficulty)}</b><span>Độ khó</span></div><div class="ibox"><b>~${r.kcal_estimate_per_serving}</b><span>kcal/phần*</span></div></div><h3>🛒 Nguyên liệu bạn có</h3><ul>${r.ingredients_have.map(x=>'<li>'+esc(x)+'</li>').join('')}</ul><h3>🛍 Có thể cần mua</h3><ul>${r.ingredients_buy.length?r.ingredients_buy.map(x=>'<li>'+esc(x)+'</li>').join(''):'<li>Không cần mua thêm theo đề xuất.</li>'}</ul><div class="tip">💡 BẾP AI sẽ hướng dẫn từng bước và chờ bạn xác nhận.</div><button class="primary" onclick="startCooking()">👨‍🍳 Cùng tôi nấu</button><div class="footer">*Kcal chỉ là ước tính.</div>`;go(5)}
+async function startCooking(){state.step=1;state.total=0;state.stepsCache={};await loadStep();go(6)}
+async function loadStep(){
+ const box=$('step');box.innerHTML='<div class="tip">🤖 BẾP AI đang chuẩn bị bước này...</div>';
+ try{const d=await api('/api/cook-step',{dish_name:state.recipe.name,recipe:state.recipe,step_number:state.step,previous_step:state.stepsCache[state.step-1]||null});
+ state.total=d.total_steps;state.stepsCache[state.step]=d;
+ box.innerHTML=`<div class="muted">${d.step_number}/${d.total_steps} · ⏱ ${d.time_minutes} phút</div><div class="stepimg">${state.step===1?'🔪':state.step===2?'🔥':state.step===3?'🍳':'✨'}</div><span class="badge">Bước ${d.step_number}</span><h2>${esc(d.title)}</h2><p>${esc(d.instruction)}</p><div class="tip">👀 <b>Dấu hiệu:</b> ${esc(d.visual_sign)}</div>${d.safety_note?'<div class="warn">⚠️ '+esc(d.safety_note)+'</div>':''}<p class="muted">${esc(d.done_question)}</p>`;
+ $('nextBtn').textContent=state.step>=state.total?'🎉 Hoàn thành':'Tôi đã làm xong →';
+ }catch(e){box.innerHTML='<div class="warn">'+esc(e.message)+'</div>'}
+}
+async function nextStep(){if(state.step<state.total){state.step++;await loadStep()}else{alert('🎉 Bạn đã hoàn thành món! Chúc ngon miệng!')}}
+async function prevStep(){if(state.step>1){state.step--;await loadStep()}}
+async function troubleshoot(){const p=$('problem').value.trim();if(!p)return alert('Hãy mô tả sự cố trước.');$('help').textContent='🤖 Đang xử lý...';try{const d=await api('/api/troubleshoot',{problem:p,dish:state.recipe?.name||'',current_step:state.step});$('help').innerHTML='<b>'+esc(d.message)+'</b><ul>'+d.actions.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul><small>'+esc(d.caution)+'</small>'}catch(e){$('help').textContent=e.message}}
+</script>
+</body>
+</html>
