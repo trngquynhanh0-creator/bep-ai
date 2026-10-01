@@ -118,7 +118,6 @@ function cleanStringArray(value) {
   return value.map(x => String(x).trim()).filter(Boolean).slice(0, 30);
 }
 
-```js
 function demoRecommendations(body) {
   const servings = Number(body.servings) || 2;
 
