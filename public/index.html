@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#16794b">
-<title>ECOMEAL AI — BẾP AI</title>
+<title>ECOMEAL AI - BẾP THÔNG MINH</title>
 <style>
 :root{--g:#16794b;--g2:#0f633d;--bg:#f5fbf7;--txt:#173328;--mut:#64756c;--line:#dfebe4;--white:#fff;--cream:#fff7df}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:var(--txt)}
@@ -28,11 +28,11 @@ button,input,select{font:inherit}.primary,.secondary{width:100%;padding:14px 16p
 </head>
 <body>
 <div class="app">
-<header><div class="brand"><div class="logo">👨‍🍳</div><div>ECOMEAL AI — BẾP AI</div></div></header>
+<header><div class="brand"><div class="logo">👨‍🍳</div><div>ECOMEAL AI - BẾP THÔNG MINH</div></div></header>
 <main>
 <section id="s1" class="screen active">
   <div class="hero"><div class="heroart">🥗🍳🥦</div><h1>Có gì trong bếp,<br>AI giúp bạn nấu gì.</h1>
-  <p class="muted">Bản có AI thật: nhập nguyên liệu, chọn mục tiêu, ECOMEAL AI — BẾP AI tự tạo món và hướng dẫn bạn nấu từng bước.</p>
+  <p class="muted">Bản có AI thật: nhập nguyên liệu, chọn mục tiêu, ECOMEAL AI - BẾP THÔNG MINH tự tạo món và hướng dẫn bạn nấu từng bước.</p>
   <button class="primary" onclick="go(2)">Bắt đầu ngay →</button><div id="status" class="status">Đang kiểm tra kết nối AI...</div></div>
   <div class="footer">Bản MVP phục vụ thử nghiệm cuộc thi · Kcal chỉ là ước tính.</div>
 </section>
@@ -54,7 +54,7 @@ button,input,select{font:inherit}.primary,.secondary{width:100%;padding:14px 16p
 <label class="muted">Số người</label><select id="servings" class="input"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option></select>
 <br><br><label class="muted">Thời gian tối đa</label><select id="time" class="input"><option value="0">Không giới hạn</option><option value="15">15 phút</option><option value="20">20 phút</option><option value="30">30 phút</option></select>
 <br><br><label class="muted">Ngân sách (VNĐ, tùy chọn)</label><input id="budget" class="input" type="number" placeholder="Ví dụ: 50000">
-<br><br><button id="findBtn" class="primary" onclick="recommend()">✨ ECOMEAL AI — BẾP AI tìm món</button>
+<br><br><button id="findBtn" class="primary" onclick="recommend()">✨ ECOMEAL AI - BẾP THÔNG MINH tìm món</button>
 </section>
 
 <section id="s4" class="screen">
@@ -95,18 +95,18 @@ async function recommend(){
   const ingredients=$('ingredients').value.split(',').map(s=>s.trim()).filter(Boolean);
   const data=await api('/api/recommend',{ingredients,goals:goals(),diet:goals().includes('Ăn chay')?'Ăn chay':goals().includes('Ăn mặn')?'Ăn mặn':'Không yêu cầu',servings:Number($('servings').value),time_limit_minutes:Number($('time').value),budget_vnd:Number($('budget').value)||0,skill:goals().includes('Người mới nấu')?'Người mới nấu':'Cơ bản'});
   $('summary').textContent=data.summary+(data.source==='openai'?' · 🤖 AI thật':' · 🧪 Demo');
-  if(data.needs_clarification){$('recipes').innerHTML='<div class="tip"><b>ECOMEAL AI — BẾP AI cần thêm thông tin:</b><ul>'+data.clarification_questions.map(q=>'<li>'+esc(q)+'</li>').join('')+'</ul></div>';go(4);return}
+  if(data.needs_clarification){$('recipes').innerHTML='<div class="tip"><b>ECOMEAL AI - BẾP THÔNG MINH cần thêm thông tin:</b><ul>'+data.clarification_questions.map(q=>'<li>'+esc(q)+'</li>').join('')+'</ul></div>';go(4);return}
   window._recipes=data.recipes||[];
   $('recipes').innerHTML=window._recipes.map((r,i)=>`<div class="recipe"><div class="rtop"><div class="food">${emoji(r.name)}</div><div><h3>${esc(r.name)}</h3><div class="muted">${esc(r.why_fit)}</div><div class="badges"><span class="badge">⏱ ${r.time_minutes} phút</span><span class="badge">⭐ ${esc(r.difficulty)}</span><span class="badge">~${r.kcal_estimate_per_serving} kcal*</span></div></div></div><button class="choose" onclick="detail(${i})">Chọn món →</button></div>`).join('');
   go(4);
- }catch(e){alert(e.message)}finally{btn.disabled=false;btn.textContent='✨ ECOMEAL AI — BẾP AI tìm món'}
+ }catch(e){alert(e.message)}finally{btn.disabled=false;btn.textContent='✨ ECOMEAL AI - BẾP THÔNG MINH tìm món'}
 }
 function emoji(n){n=n.toLowerCase();if(n.includes('canh'))return'🥣';if(n.includes('trứng'))return'🍳';if(n.includes('đậu'))return'🥢';if(n.includes('gà'))return'🍗';if(n.includes('rau'))return'🥬';return'🍲'}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function detail(i){state.recipe=window._recipes[i];const r=state.recipe;$('detail').innerHTML=`<div class="detailimg">${emoji(r.name)}</div><h2>${esc(r.name)}</h2><p class="muted">${esc(r.why_fit)}</p><div class="info"><div class="ibox"><b>${r.time_minutes} phút</b><span>Thời gian</span></div><div class="ibox"><b>${esc(r.difficulty)}</b><span>Độ khó</span></div><div class="ibox"><b>~${r.kcal_estimate_per_serving}</b><span>kcal/phần*</span></div></div><h3>🛒 Nguyên liệu bạn có</h3><ul>${r.ingredients_have.map(x=>'<li>'+esc(x)+'</li>').join('')}</ul><h3>🛍 Có thể cần mua</h3><ul>${r.ingredients_buy.length?r.ingredients_buy.map(x=>'<li>'+esc(x)+'</li>').join(''):'<li>Không cần mua thêm theo đề xuất.</li>'}</ul><div class="tip">💡 ECOMEAL AI — BẾP AI sẽ hướng dẫn từng bước và chờ bạn xác nhận.</div><button class="primary" onclick="startCooking()">👨‍🍳 Cùng tôi nấu</button><div class="footer">*Kcal chỉ là ước tính.</div>`;go(5)}
+function detail(i){state.recipe=window._recipes[i];const r=state.recipe;$('detail').innerHTML=`<div class="detailimg">${emoji(r.name)}</div><h2>${esc(r.name)}</h2><p class="muted">${esc(r.why_fit)}</p><div class="info"><div class="ibox"><b>${r.time_minutes} phút</b><span>Thời gian</span></div><div class="ibox"><b>${esc(r.difficulty)}</b><span>Độ khó</span></div><div class="ibox"><b>~${r.kcal_estimate_per_serving}</b><span>kcal/phần*</span></div></div><h3>🛒 Nguyên liệu bạn có</h3><ul>${r.ingredients_have.map(x=>'<li>'+esc(x)+'</li>').join('')}</ul><h3>🛍 Có thể cần mua</h3><ul>${r.ingredients_buy.length?r.ingredients_buy.map(x=>'<li>'+esc(x)+'</li>').join(''):'<li>Không cần mua thêm theo đề xuất.</li>'}</ul><div class="tip">💡 ECOMEAL AI - BẾP THÔNG MINH sẽ hướng dẫn từng bước và chờ bạn xác nhận.</div><button class="primary" onclick="startCooking()">👨‍🍳 Cùng tôi nấu</button><div class="footer">*Kcal chỉ là ước tính.</div>`;go(5)}
 async function startCooking(){state.step=1;state.total=0;state.stepsCache={};await loadStep();go(6)}
 async function loadStep(){
- const box=$('step');box.innerHTML='<div class="tip">🤖 ECOMEAL AI — BẾP AI đang chuẩn bị bước này...</div>';
+ const box=$('step');box.innerHTML='<div class="tip">🤖 ECOMEAL AI - BẾP THÔNG MINH đang chuẩn bị bước này...</div>';
  try{const d=await api('/api/cook-step',{dish_name:state.recipe.name,recipe:state.recipe,step_number:state.step,previous_step:state.stepsCache[state.step-1]||null});
  state.total=d.total_steps;state.stepsCache[state.step]=d;
  box.innerHTML=`<div class="muted">${d.step_number}/${d.total_steps} · ⏱ ${d.time_minutes} phút</div><div class="stepimg">${state.step===1?'🔪':state.step===2?'🔥':state.step===3?'🍳':'✨'}</div><span class="badge">Bước ${d.step_number}</span><h2>${esc(d.title)}</h2><p>${esc(d.instruction)}</p><div class="tip">👀 <b>Dấu hiệu:</b> ${esc(d.visual_sign)}</div>${d.safety_note?'<div class="warn">⚠️ '+esc(d.safety_note)+'</div>':''}<p class="muted">${esc(d.done_question)}</p>`;
