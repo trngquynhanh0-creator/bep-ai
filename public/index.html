@@ -31,7 +31,7 @@ button,input,select{font:inherit}.primary,.secondary{width:100%;padding:14px 16p
 <header><div class="brand"><div class="logo">👨‍🍳</div><div>ECOMEAL - BẾP THÔNG MINH</div></div></header>
 <main>
 <section id="s1" class="screen active">
-  <div class="hero"><div class="heroart">🥗🍳🥦</div><h1>Có gì trong bếp,<br>AI giúp bạn nấu gì.</h1>
+  <div class="hero"><div class="heroart">🥗🍳🥦</div><h1>Có gì trong bếp,<br>ECOMEAL giúp bạn nấu món ngon.</h1>
   <p class="muted">Bản có AI thật: nhập nguyên liệu, chọn mục tiêu, ECOMEAL - BẾP THÔNG MINH tự tạo món và hướng dẫn bạn nấu từng bước.</p>
   <button class="primary" onclick="go(2)">Bắt đầu ngay →</button><div id="status" class="status">Đang kiểm tra kết nối AI...</div></div>
   <div class="footer"> · Kcal chỉ là ước tính.</div>
@@ -86,11 +86,11 @@ async function api(url,data){
  const r=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
  const j=await r.json();if(!r.ok)throw new Error(j.error||'Lỗi máy chủ');return j;
 }
-async function health(){try{const r=await fetch('/api/health');const j=await r.json();$('status').textContent=j.ai_configured?'🤖 AI thật đã kết nối':'🧪 Demo — chưa cấu hình API key';}catch{$('status').textContent='⚠️ Chưa kết nối máy chủ';}}
+async function health(){   try {     const r = await fetch('/api/health');     if (!r.ok) throw new Error('Server error');     $('status').textContent = '🌿 Kho công thức đã sẵn sàng';   } catch {     $('status').textContent = '⚠️ Chưa kết nối máy chủ';   } }
 health();
 function goals(){return [...document.querySelectorAll('#goals .chip.on')].map(x=>x.dataset.v)}
 async function recommend(){
- const btn=$('findBtn');btn.disabled=true;btn.innerHTML='<span class="spinner"></span> AI đang suy nghĩ...';
+ const btn=$('findBtn');btn.disabled=true;btn.innerHTML='<span class="spinner"></span> Đang tìm món phù hợp...';
  try{
   const ingredients=$('ingredients').value.split(',').map(s=>s.trim()).filter(Boolean);
   const data=await api('/api/recommend',{ingredients,goals:goals(),diet:goals().includes('Ăn chay')?'Ăn chay':goals().includes('Ăn mặn')?'Ăn mặn':'Không yêu cầu',servings:Number($('servings').value),time_limit_minutes:Number($('time').value),budget_vnd:Number($('budget').value)||0,skill:goals().includes('Người mới nấu')?'Người mới nấu':'Cơ bản'});
