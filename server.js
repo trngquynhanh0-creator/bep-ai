@@ -454,7 +454,7 @@ app.post("/api/recommend", async (req, res) => {
     });
 
   } catch (err) {
-    console.error("Lỗi đọc kho công thức:", err);
+    console.error("Lỗi đọc kho công thức:", err.message);
 
     return res.status(500).json({
       error: "Không đọc được kho công thức. Hãy kiểm tra file recipes.json."
