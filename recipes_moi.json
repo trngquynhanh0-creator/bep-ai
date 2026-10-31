@@ -1,0 +1,1148 @@
+[
+  {
+    "id": "trung-sot-ca-chua",
+    "name": "Trứng sốt cà chua",
+    "category": "Món trứng",
+    "difficulty": "Rất dễ",
+    "time_minutes": 15,
+    "kcal_estimate_per_serving": 230,
+    "ingredients": [
+      {
+        "name": "trứng",
+        "amount": "2 quả"
+      },
+      {
+        "name": "cà chua",
+        "amount": "2 quả"
+      },
+      {
+        "name": "hành lá",
+        "amount": "1 ít"
+      },
+      {
+        "name": "dầu ăn",
+        "amount": "1 muỗng canh"
+      },
+      {
+        "name": "nước mắm",
+        "amount": "1 muỗng cà phê"
+      }
+    ],
+    "tags": [
+      "mặn",
+      "nhanh",
+      "người mới"
+    ],
+    "steps": [
+      {
+        "title": "Chuẩn bị nguyên liệu",
+        "instruction": "Rửa cà chua và hành lá. Cắt cà chua thành múi nhỏ, thái hành lá. Đập trứng vào bát và đánh đều.",
+        "time_minutes": 3,
+        "visual_sign": "Trứng hòa đều lòng đỏ và lòng trắng; cà chua được cắt thành miếng vừa ăn.",
+        "safety_note": "Cẩn thận khi dùng dao."
+      },
+      {
+        "title": "Làm trứng chín sơ",
+        "instruction": "Làm nóng chảo ở lửa vừa, thêm một ít dầu. Đổ trứng vào, đảo nhẹ đến khi trứng vừa đông lại rồi trút ra đĩa.",
+        "time_minutes": 3,
+        "visual_sign": "Trứng chuyển từ lỏng sang mềm và không còn chảy nước.",
+        "safety_note": "Đứng cách chảo một khoảng để tránh dầu bắn."
+      },
+      {
+        "title": "Nấu sốt cà chua",
+        "instruction": "Cho thêm chút dầu nếu cần. Cho cà chua vào chảo, đảo 2–3 phút. Thêm 2–3 muỗng canh nước và đun đến khi cà chua mềm.",
+        "time_minutes": 5,
+        "visual_sign": "Cà chua mềm, tiết nước và tạo thành phần sốt sệt.",
+        "safety_note": "Cẩn thận hơi nóng khi nước sốt sôi."
+      },
+      {
+        "title": "Hoàn thành món ăn",
+        "instruction": "Cho trứng trở lại chảo, đảo nhẹ cùng sốt. Nêm nước mắm vừa ăn, đun thêm đến khi trứng nóng đều và chín hoàn toàn. Rắc hành lá rồi tắt bếp.",
+        "time_minutes": 4,
+        "visual_sign": "Trứng chín hoàn toàn, sốt phủ đều và món ăn nóng sôi nhẹ.",
+        "safety_note": "Không nếm trực tiếp khi món còn quá nóng."
+      }
+    ]
+  },
+  {
+    "id": "trung-chien-hanh",
+    "name": "Trứng chiên hành",
+    "category": "Món trứng",
+    "difficulty": "Rất dễ",
+    "time_minutes": 10,
+    "kcal_estimate_per_serving": 210,
+    "ingredients": [
+      {
+        "name": "trứng",
+        "amount": "2 quả"
+      },
+      {
+        "name": "hành lá",
+        "amount": "1 ít"
+      },
+      {
+        "name": "dầu ăn",
+        "amount": "1 muỗng canh"
+      },
+      {
+        "name": "nước mắm",
+        "amount": "1 ít"
+      }
+    ],
+    "tags": [
+      "mặn",
+      "nhanh",
+      "người mới"
+    ],
+    "steps": [
+      {
+        "title": "Chuẩn bị",
+        "instruction": "Rửa hành lá, thái nhỏ. Đập trứng vào bát, thêm hành và một ít nước mắm rồi đánh đều.",
+        "time_minutes": 2,
+        "visual_sign": "Hỗn hợp trứng có màu vàng đồng nhất và hành phân bố đều.",
+        "safety_note": "Rửa tay sau khi tiếp xúc với trứng sống."
+      },
+      {
+        "title": "Chiên trứng",
+        "instruction": "Làm nóng chảo ở lửa vừa, thêm dầu. Đổ trứng vào chảo, nghiêng nhẹ để trứng dàn đều.",
+        "time_minutes": 3,
+        "visual_sign": "Phần rìa trứng bắt đầu đông lại, mặt trứng bớt lỏng.",
+        "safety_note": "Cẩn thận dầu nóng."
+      },
+      {
+        "title": "Lật và làm chín",
+        "instruction": "Khi mặt dưới đã vàng và tương đối chắc, dùng xẻng lật trứng. Chiên mặt còn lại đến khi trứng chín hoàn toàn.",
+        "time_minutes": 5,
+        "visual_sign": "Hai mặt trứng vàng nhẹ, phần giữa không còn lỏng.",
+        "safety_note": "Dùng xẻng dài và tránh để tay gần chảo nóng."
+      }
+    ]
+  },
+  {
+    "id": "canh-rau-cai-dau-phu",
+    "name": "Canh rau cải đậu phụ",
+    "category": "Món canh",
+    "difficulty": "Rất dễ",
+    "time_minutes": 15,
+    "kcal_estimate_per_serving": 120,
+    "ingredients": [
+      {
+        "name": "rau cải",
+        "amount": "1 bó nhỏ"
+      },
+      {
+        "name": "đậu phụ",
+        "amount": "1 bìa"
+      },
+      {
+        "name": "nước",
+        "amount": "500 ml"
+      },
+      {
+        "name": "muối",
+        "amount": "vừa đủ"
+      }
+    ],
+    "tags": [
+      "chay",
+      "mặn",
+      "nhanh",
+      "người mới"
+    ],
+    "steps": [
+      {
+        "title": "Sơ chế",
+        "instruction": "Rửa rau cải nhiều lần với nước sạch, cắt khúc vừa ăn. Cắt đậu phụ thành miếng vuông nhỏ.",
+        "time_minutes": 4,
+        "visual_sign": "Rau sạch, để ráo; đậu phụ thành miếng đều.",
+        "safety_note": "Cẩn thận khi dùng dao."
+      },
+      {
+        "title": "Đun nước",
+        "instruction": "Cho nước vào nồi, đun ở lửa lớn đến khi nước sôi lăn tăn rồi hạ xuống lửa vừa.",
+        "time_minutes": 4,
+        "visual_sign": "Có nhiều bọt khí nổi lên liên tục trên mặt nước.",
+        "safety_note": "Không cúi sát miệng nồi đang bốc hơi."
+      },
+      {
+        "title": "Nấu canh",
+        "instruction": "Cho đậu phụ vào nồi trước, nấu khoảng 2 phút. Thêm rau cải, khuấy nhẹ và nấu đến khi rau mềm vừa.",
+        "time_minutes": 5,
+        "visual_sign": "Rau chuyển màu xanh đậm hơn và mềm; nước canh sôi nhẹ.",
+        "safety_note": "Cho rau từ từ để tránh nước nóng bắn."
+      },
+      {
+        "title": "Nêm canh",
+        "instruction": "Thêm muối từng ít một, khuấy đều và nếm thử khi canh đã nguội bớt.",
+        "time_minutes": 2,
+        "visual_sign": "Canh nóng đều, rau chín và đậu phụ nóng bên trong.",
+        "safety_note": "Cẩn thận khi nhấc nồi nóng."
+      }
+    ]
+  },
+  {
+    "id": "dau-phu-sot-ca-chua",
+    "name": "Đậu phụ sốt cà chua",
+    "category": "Món chay",
+    "difficulty": "Dễ",
+    "time_minutes": 20,
+    "kcal_estimate_per_serving": 190,
+    "ingredients": [
+      {
+        "name": "đậu phụ",
+        "amount": "2 bìa"
+      },
+      {
+        "name": "cà chua",
+        "amount": "2 quả"
+      },
+      {
+        "name": "hành lá",
+        "amount": "1 ít"
+      },
+      {
+        "name": "dầu ăn",
+        "amount": "1 muỗng canh"
+      },
+      {
+        "name": "nước mắm",
+        "amount": "1 ít, có thể thay bằng muối"
+      }
+    ],
+    "tags": [
+      "chay",
+      "mặn",
+      "người mới"
+    ],
+    "steps": [
+      {
+        "title": "Sơ chế",
+        "instruction": "Rửa cà chua, thái múi nhỏ. Cắt đậu phụ thành miếng vuông vừa ăn; thái hành lá.",
+        "time_minutes": 4,
+        "visual_sign": "Cà chua và đậu phụ được cắt thành miếng vừa ăn.",
+        "safety_note": "Cẩn thận khi dùng dao."
+      },
+      {
+        "title": "Áp chảo đậu phụ",
+        "instruction": "Làm nóng chảo với một ít dầu ở lửa vừa. Xếp đậu phụ vào và chiên nhẹ các mặt đến khi vàng nhạt, sau đó gắp ra.",
+        "time_minutes": 6,
+        "visual_sign": "Bề mặt đậu phụ se lại và có màu vàng nhạt.",
+        "safety_note": "Đậu phụ có thể làm dầu bắn; đặt nhẹ từng miếng vào chảo."
+      },
+      {
+        "title": "Làm sốt",
+        "instruction": "Cho cà chua vào chảo, đảo mềm. Thêm một ít nước, đun đến khi cà chua tạo thành sốt.",
+        "time_minutes": 5,
+        "visual_sign": "Cà chua mềm và nước sốt hơi sánh.",
+        "safety_note": "Cẩn thận hơi nóng từ sốt."
+      },
+      {
+        "title": "Om đậu phụ",
+        "instruction": "Cho đậu phụ vào sốt, đảo nhẹ để sốt phủ đều. Nêm vừa ăn, đun thêm vài phút rồi rắc hành lá.",
+        "time_minutes": 5,
+        "visual_sign": "Đậu phụ nóng đều và được phủ sốt cà chua.",
+        "safety_note": "Không đảo quá mạnh làm nát đậu phụ."
+      }
+    ]
+  },
+  {
+    "id": "rau-muong-xao-toi",
+    "name": "Rau muống xào tỏi",
+    "category": "Món rau",
+    "difficulty": "Dễ",
+    "time_minutes": 12,
+    "kcal_estimate_per_serving": 100,
+    "ingredients": [
+      {
+        "name": "rau muống",
+        "amount": "1 bó"
+      },
+      {
+        "name": "tỏi",
+        "amount": "2 tép"
+      },
+      {
+        "name": "dầu ăn",
+        "amount": "1 muỗng canh"
+      },
+      {
+        "name": "muối",
+        "amount": "vừa đủ"
+      }
+    ],
+    "tags": [
+      "chay",
+      "mặn",
+      "nhanh"
+    ],
+    "steps": [
+      {
+        "title": "Sơ chế rau",
+        "instruction": "Nhặt bỏ lá úa, rửa rau muống nhiều lần và để ráo. Đập dập, bóc vỏ rồi băm nhỏ tỏi.",
+        "time_minutes": 4,
+        "visual_sign": "Rau sạch, không còn đất cát nhìn thấy được.",
+        "safety_note": "Cẩn thận khi dùng dao băm tỏi."
+      },
+      {
+        "title": "Phi thơm tỏi",
+        "instruction": "Làm nóng chảo ở lửa vừa, cho dầu và tỏi vào đảo nhanh đến khi dậy mùi thơm.",
+        "time_minutes": 1,
+        "visual_sign": "Tỏi thơm và hơi vàng, chưa chuyển nâu sẫm.",
+        "safety_note": "Tỏi và dầu nóng có thể bắn."
+      },
+      {
+        "title": "Xào rau",
+        "instruction": "Cho rau muống vào chảo, đảo đều. Xào đến khi rau mềm vừa, nêm muối từng ít một.",
+        "time_minutes": 6,
+        "visual_sign": "Rau chuyển xanh đậm, thân rau mềm nhưng vẫn còn độ giòn.",
+        "safety_note": "Đảo cẩn thận để tránh dầu nóng bắn ra ngoài."
+      },
+      {
+        "title": "Hoàn thành",
+        "instruction": "Đảo thêm một chút cho gia vị phân bố đều, kiểm tra rau đã chín phù hợp rồi tắt bếp.",
+        "time_minutes": 1,
+        "visual_sign": "Rau chín đều, không còn phần sống cứng.",
+        "safety_note": "Dùng dụng cụ gắp hoặc xẻng, tránh chạm chảo nóng."
+      }
+    ]
+  },
+  {
+    "id": "com-chien-trung",
+    "name": "Cơm chiên trứng",
+    "category": "Món cơm",
+    "difficulty": "Dễ",
+    "time_minutes": 15,
+    "kcal_estimate_per_serving": 320,
+    "ingredients": [
+      {
+        "name": "cơm nguội",
+        "amount": "2 bát"
+      },
+      {
+        "name": "trứng",
+        "amount": "2 quả"
+      },
+      {
+        "name": "hành lá",
+        "amount": "1 ít"
+      },
+      {
+        "name": "dầu ăn",
+        "amount": "1 muỗng canh"
+      },
+      {
+        "name": "nước mắm",
+        "amount": "1 ít"
+      }
+    ],
+    "tags": [
+      "mặn",
+      "nhanh",
+      "người mới"
+    ],
+    "steps": [
+      {
+        "title": "Chuẩn bị",
+        "instruction": "Dùng cơm đã được bảo quản lạnh đúng cách, làm tơi cơm. Đập trứng ra bát, đánh đều; thái nhỏ hành lá.",
+        "time_minutes": 3,
+        "visual_sign": "Hạt cơm tơi, trứng được đánh đều.",
+        "safety_note": "Không dùng cơm có mùi lạ hoặc để lâu ở nhiệt độ phòng."
+      },
+      {
+        "title": "Chiên trứng",
+        "instruction": "Làm nóng chảo với một ít dầu ở lửa vừa. Cho trứng vào đảo nhanh đến khi trứng chín thành miếng nhỏ.",
+        "time_minutes": 3,
+        "visual_sign": "Trứng đông lại hoàn toàn, không còn phần lỏng.",
+        "safety_note": "Cẩn thận dầu nóng."
+      },
+      {
+        "title": "Chiên cơm",
+        "instruction": "Cho cơm vào chảo, đảo và dàn đều để cơm nóng. Tiếp tục đảo đến khi cơm nóng bốc hơi đều.",
+        "time_minutes": 6,
+        "visual_sign": "Cơm nóng đều, các hạt tơi và không còn lạnh ở giữa.",
+        "safety_note": "Tránh để cơm bắn ra ngoài khi đảo."
+      },
+      {
+        "title": "Nêm và hoàn thiện",
+        "instruction": "Cho trứng trở lại chảo, thêm chút nước mắm và hành lá. Đảo đều rồi tắt bếp.",
+        "time_minutes": 3,
+        "visual_sign": "Trứng và cơm hòa đều, món ăn nóng hoàn toàn.",
+        "safety_note": "Nếm khi món đã nguội bớt."
+      }
+    ]
+  },
+  {
+    "id": "mi-xao-rau",
+    "name": "Mì xào rau",
+    "category": "Món mì",
+    "difficulty": "Dễ",
+    "time_minutes": 15,
+    "kcal_estimate_per_serving": 300,
+    "ingredients": [
+      {
+        "name": "mì",
+        "amount": "1–2 vắt"
+      },
+      {
+        "name": "rau cải",
+        "amount": "1 ít"
+      },
+      {
+        "name": "trứng",
+        "amount": "1 quả, tùy chọn"
+      },
+      {
+        "name": "dầu ăn",
+        "amount": "1 ít"
+      }
+    ],
+    "tags": [
+      "chay",
+      "mặn",
+      "nhanh"
+    ],
+    "steps": [
+      {
+        "title": "Chuẩn bị",
+        "instruction": "Rửa rau cải và cắt khúc. Trụng mì theo hướng dẫn trên bao bì, sau đó để ráo. Nếu dùng trứng, đập ra bát và đánh đều.",
+        "time_minutes": 5,
+        "visual_sign": "Mì mềm vừa, không nhũn; rau đã cắt khúc.",
+        "safety_note": "Cẩn thận nước nóng khi trụng mì."
+      },
+      {
+        "title": "Xào trứng (nếu dùng)",
+        "instruction": "Làm nóng chảo với ít dầu ở lửa vừa. Cho trứng vào đảo đến khi chín hoàn toàn.",
+        "time_minutes": 2,
+        "visual_sign": "Trứng đông lại, không còn phần lỏng.",
+        "safety_note": "Cẩn thận dầu nóng."
+      },
+      {
+        "title": "Xào rau và mì",
+        "instruction": "Cho rau vào đảo đến khi hơi mềm. Thêm mì đã để ráo, đảo đều cho nóng và hòa quyện.",
+        "time_minutes": 6,
+        "visual_sign": "Rau mềm vừa, mì nóng đều và không còn đọng nước.",
+        "safety_note": "Đảo nhẹ để tránh mì và dầu bắn."
+      },
+      {
+        "title": "Nêm hoàn thiện",
+        "instruction": "Nêm gia vị theo gói mì hoặc khẩu vị, dùng lượng vừa phải. Đảo đều rồi tắt bếp.",
+        "time_minutes": 2,
+        "visual_sign": "Mì nóng đều, rau chín phù hợp.",
+        "safety_note": "Nếm khi món đã nguội bớt."
+      }
+    ]
+  },
+  {
+    "id": "khoai-tay-xao-trung",
+    "name": "Khoai tây xào trứng",
+    "category": "Món ăn chính",
+    "difficulty": "Dễ",
+    "time_minutes": 20,
+    "kcal_estimate_per_serving": 280,
+    "ingredients": [
+      {
+        "name": "khoai tây",
+        "amount": "2 củ nhỏ"
+      },
+      {
+        "name": "trứng",
+        "amount": "2 quả"
+      },
+      {
+        "name": "hành lá",
+        "amount": "1 ít"
+      },
+      {
+        "name": "dầu ăn",
+        "amount": "1 muỗng canh"
+      }
+    ],
+    "tags": [
+      "mặn",
+      "người mới"
+    ],
+    "steps": [
+      {
+        "title": "Sơ chế",
+        "instruction": "Gọt vỏ khoai tây, rửa sạch và thái lát mỏng. Thái nhỏ hành lá, đánh trứng trong bát.",
+        "time_minutes": 5,
+        "visual_sign": "Khoai được thái lát tương đối mỏng và đều.",
+        "safety_note": "Cẩn thận khi dùng dao và dụng cụ gọt."
+      },
+      {
+        "title": "Làm mềm khoai",
+        "instruction": "Làm nóng chảo với dầu ở lửa vừa. Cho khoai vào đảo, thêm 2–3 muỗng canh nước rồi đậy nắp vài phút cho khoai mềm.",
+        "time_minutes": 8,
+        "visual_sign": "Khoai mềm khi dùng đũa hoặc xẻng ấn nhẹ, không còn cứng ở giữa.",
+        "safety_note": "Mở nắp chảo nghiêng về phía xa mặt để tránh hơi nóng."
+      },
+      {
+        "title": "Thêm trứng",
+        "instruction": "Mở nắp, đảo khoai. Rót trứng đã đánh vào chảo, đảo nhẹ đến khi trứng chín hoàn toàn.",
+        "time_minutes": 5,
+        "visual_sign": "Trứng đông lại, khoai mềm và nóng đều.",
+        "safety_note": "Cẩn thận hơi nóng và dầu bắn."
+      },
+      {
+        "title": "Hoàn thành",
+        "instruction": "Thêm hành lá, nêm vừa ăn và đảo đều rồi tắt bếp.",
+        "time_minutes": 2,
+        "visual_sign": "Khoai mềm, trứng chín hoàn toàn và hành vừa chín tới.",
+        "safety_note": "Không ăn khoai còn sống hoặc chưa chín mềm."
+      }
+    ]
+  },
+  {
+    "id": "ga-kho-gung",
+    "name": "Gà kho gừng",
+    "category": "Món mặn",
+    "difficulty": "Dễ",
+    "time_minutes": 30,
+    "kcal_estimate_per_serving": 290,
+    "ingredients": [
+      {
+        "name": "thịt gà",
+        "amount": "300 g"
+      },
+      {
+        "name": "gừng",
+        "amount": "1 nhánh nhỏ"
+      },
+      {
+        "name": "hành tím",
+        "amount": "2 củ"
+      },
+      {
+        "name": "nước mắm",
+        "amount": "1 muỗng canh"
+      },
+      {
+        "name": "đường",
+        "amount": "1 muỗng cà phê"
+      },
+      {
+        "name": "dầu ăn",
+        "amount": "1 muỗng cà phê"
+      }
+    ],
+    "tags": [
+      "mặn",
+      "cơm nhà"
+    ],
+    "steps": [
+      {
+        "title": "Sơ chế gà và gừng",
+        "instruction": "Rửa thịt gà dưới vòi nước sạch, để ráo và chặt thành miếng vừa ăn. Gọt vỏ gừng, thái sợi; bóc vỏ và băm nhỏ hành tím.",
+        "time_minutes": 6,
+        "visual_sign": "Thịt gà được chia thành miếng tương đối đều, gừng thái sợi.",
+        "safety_note": "Rửa tay và dụng cụ sau khi tiếp xúc với thịt gà sống; không dùng chung thớt cho thức ăn chín."
+      },
+      {
+        "title": "Ướp thịt",
+        "instruction": "Cho gà vào tô, thêm nước mắm, đường, hành tím và một nửa phần gừng. Trộn đều, để khoảng 10 phút.",
+        "time_minutes": 10,
+        "visual_sign": "Gia vị bám đều quanh các miếng gà.",
+        "safety_note": "Ướp trong ngăn mát nếu chưa nấu ngay."
+      },
+      {
+        "title": "Kho gà",
+        "instruction": "Làm nóng nồi với ít dầu ở lửa vừa. Cho gà vào đảo đến khi mặt ngoài săn lại. Thêm phần gừng còn lại và khoảng nửa bát nước, đậy nắp, hạ lửa nhỏ.",
+        "time_minutes": 10,
+        "visual_sign": "Nước kho sôi nhẹ, thịt gà chuyển màu và chín dần.",
+        "safety_note": "Cẩn thận dầu nóng và hơi nước khi mở nắp."
+      },
+      {
+        "title": "Hoàn thành",
+        "instruction": "Mở nắp, đảo nhẹ và kho đến khi thịt gà chín hoàn toàn, nước kho hơi sánh. Nêm lại vừa ăn rồi tắt bếp.",
+        "time_minutes": 4,
+        "visual_sign": "Thịt gà chín tới tận bên trong, nước kho phủ quanh miếng thịt.",
+        "safety_note": "Không ăn thịt gà còn sống hoặc chưa chín kỹ."
+      }
+    ]
+  },
+  {
+    "id": "thit-heo-xao-hanh-tay",
+    "name": "Thịt heo xào hành tây",
+    "category": "Món mặn",
+    "difficulty": "Dễ",
+    "time_minutes": 20,
+    "kcal_estimate_per_serving": 310,
+    "ingredients": [
+      {
+        "name": "thịt heo",
+        "amount": "250 g"
+      },
+      {
+        "name": "hành tây",
+        "amount": "1 củ"
+      },
+      {
+        "name": "tỏi",
+        "amount": "2 tép"
+      },
+      {
+        "name": "dầu ăn",
+        "amount": "1 muỗng canh"
+      },
+      {
+        "name": "nước mắm",
+        "amount": "1 muỗng cà phê"
+      }
+    ],
+    "tags": [
+      "mặn",
+      "nhanh"
+    ],
+    "steps": [
+      {
+        "title": "Sơ chế",
+        "instruction": "Rửa nhanh hành tây và bóc vỏ, thái múi cau. Thái thịt heo thành lát mỏng; băm nhỏ tỏi.",
+        "time_minutes": 5,
+        "visual_sign": "Thịt được thái lát mỏng, hành tây tách thành các miếng vừa ăn.",
+        "safety_note": "Dùng thớt riêng cho thịt sống và rau củ."
+      },
+      {
+        "title": "Ướp thịt",
+        "instruction": "Trộn thịt với nước mắm và một nửa phần tỏi, để khoảng 5 phút.",
+        "time_minutes": 5,
+        "visual_sign": "Gia vị phủ đều các lát thịt.",
+        "safety_note": "Không để thịt sống ở nhiệt độ phòng quá lâu."
+      },
+      {
+        "title": "Xào thịt",
+        "instruction": "Làm nóng chảo với dầu ở lửa vừa. Cho phần tỏi còn lại vào đảo nhanh, sau đó cho thịt vào xào đến khi thịt đổi màu và gần chín.",
+        "time_minutes": 5,
+        "visual_sign": "Các lát thịt không còn màu hồng ở mặt ngoài.",
+        "safety_note": "Đảo cẩn thận để tránh dầu bắn."
+      },
+      {
+        "title": "Xào cùng hành tây",
+        "instruction": "Cho hành tây vào chảo, đảo thêm đến khi hành hơi trong và thịt chín hoàn toàn. Nêm lại vừa ăn rồi tắt bếp.",
+        "time_minutes": 5,
+        "visual_sign": "Hành tây mềm nhưng còn độ giòn, thịt chín đều bên trong.",
+        "safety_note": "Nếu miếng thịt dày, tiếp tục nấu đến khi chín hoàn toàn."
+      }
+    ]
+  },
+  {
+    "id": "ca-sot-ca-chua",
+    "name": "Cá sốt cà chua",
+    "category": "Món cá",
+    "difficulty": "Dễ",
+    "time_minutes": 25,
+    "kcal_estimate_per_serving": 270,
+    "ingredients": [
+      {
+        "name": "cá",
+        "amount": "2 khúc vừa"
+      },
+      {
+        "name": "cà chua",
+        "amount": "2 quả"
+      },
+      {
+        "name": "hành tím",
+        "amount": "1 củ"
+      },
+      {
+        "name": "thì là",
+        "amount": "1 ít"
+      },
+      {
+        "name": "dầu ăn",
+        "amount": "1 muỗng canh"
+      },
+      {
+        "name": "nước mắm",
+        "amount": "1 muỗng cà phê"
+      }
+    ],
+    "tags": [
+      "mặn",
+      "cơm nhà"
+    ],
+    "steps": [
+      {
+        "title": "Sơ chế",
+        "instruction": "Làm sạch cá theo cách phù hợp với loại cá, để ráo. Rửa cà chua và thì là; thái cà chua thành múi nhỏ, băm hành tím.",
+        "time_minutes": 5,
+        "visual_sign": "Cá sạch, để ráo; cà chua được cắt nhỏ.",
+        "safety_note": "Rửa tay và dụng cụ sau khi sơ chế cá sống."
+      },
+      {
+        "title": "Làm sốt cà chua",
+        "instruction": "Làm nóng chảo với dầu ở lửa vừa. Cho hành tím vào đảo thơm, thêm cà chua và một ít nước, nấu đến khi cà chua mềm.",
+        "time_minutes": 6,
+        "visual_sign": "Cà chua mềm, tạo thành phần sốt đỏ và hơi sánh.",
+        "safety_note": "Cẩn thận dầu nóng và sốt bắn."
+      },
+      {
+        "title": "Nấu cá",
+        "instruction": "Đặt cá vào chảo sốt, thêm nước mắm và một ít nước nếu sốt quá đặc. Đậy nắp, nấu ở lửa nhỏ vừa; lật cá nhẹ nhàng nếu cần.",
+        "time_minutes": 10,
+        "visual_sign": "Thịt cá chuyển đục và dễ tách thành thớ.",
+        "safety_note": "Nấu cá đến khi chín hoàn toàn; tránh làm vỡ miếng cá khi lật."
+      },
+      {
+        "title": "Hoàn thành",
+        "instruction": "Mở nắp, nêm lại vừa ăn, thêm thì là và đun thêm một phút rồi tắt bếp.",
+        "time_minutes": 4,
+        "visual_sign": "Cá chín bên trong, sốt nóng đều và thì là vừa mềm.",
+        "safety_note": "Cẩn thận xương cá khi ăn."
+      }
+    ]
+  },
+  {
+    "id": "canh-bi-do-thit-bam",
+    "name": "Canh bí đỏ thịt băm",
+    "category": "Món canh",
+    "difficulty": "Dễ",
+    "time_minutes": 20,
+    "kcal_estimate_per_serving": 180,
+    "ingredients": [
+      {
+        "name": "bí đỏ",
+        "amount": "300 g"
+      },
+      {
+        "name": "thịt heo",
+        "amount": "100 g"
+      },
+      {
+        "name": "hành lá",
+        "amount": "1 ít"
+      },
+      {
+        "name": "nước",
+        "amount": "600 ml"
+      },
+      {
+        "name": "muối",
+        "amount": "vừa đủ"
+      }
+    ],
+    "tags": [
+      "mặn",
+      "canh",
+      "cơm nhà"
+    ],
+    "steps": [
+      {
+        "title": "Sơ chế",
+        "instruction": "Gọt vỏ bí đỏ, bỏ hạt, rửa sạch rồi cắt miếng vừa ăn. Băm nhỏ thịt heo và thái hành lá.",
+        "time_minutes": 5,
+        "visual_sign": "Bí đỏ được cắt thành miếng gần bằng nhau.",
+        "safety_note": "Cẩn thận khi gọt bí vì vỏ khá cứng."
+      },
+      {
+        "title": "Nấu thịt",
+        "instruction": "Cho thịt băm vào nồi cùng một ít nước, dùng đũa khuấy tơi. Đun ở lửa vừa đến khi thịt đổi màu và chín.",
+        "time_minutes": 4,
+        "visual_sign": "Thịt tơi thành hạt nhỏ, không còn màu sống.",
+        "safety_note": "Dùng dụng cụ sạch khi xử lý thịt sống."
+      },
+      {
+        "title": "Nấu bí đỏ",
+        "instruction": "Thêm phần nước còn lại và bí đỏ vào nồi. Đun sôi rồi hạ lửa vừa, nấu đến khi bí mềm.",
+        "time_minutes": 8,
+        "visual_sign": "Miếng bí mềm khi dùng đũa xiên nhẹ, nước canh sôi nhẹ.",
+        "safety_note": "Tránh cúi sát nồi khi nước sôi và bốc hơi."
+      },
+      {
+        "title": "Nêm canh",
+        "instruction": "Nêm muối từng ít một, khuấy nhẹ. Thêm hành lá rồi tắt bếp.",
+        "time_minutes": 3,
+        "visual_sign": "Bí mềm, thịt chín và canh nóng đều.",
+        "safety_note": "Cẩn thận khi di chuyển nồi nóng."
+      }
+    ]
+  },
+  {
+    "id": "dau-que-xao-toi",
+    "name": "Đậu que xào tỏi",
+    "category": "Món rau",
+    "difficulty": "Dễ",
+    "time_minutes": 15,
+    "kcal_estimate_per_serving": 110,
+    "ingredients": [
+      {
+        "name": "đậu que",
+        "amount": "200 g"
+      },
+      {
+        "name": "tỏi",
+        "amount": "2 tép"
+      },
+      {
+        "name": "dầu ăn",
+        "amount": "1 muỗng canh"
+      },
+      {
+        "name": "muối",
+        "amount": "vừa đủ"
+      }
+    ],
+    "tags": [
+      "chay",
+      "mặn",
+      "nhanh"
+    ],
+    "steps": [
+      {
+        "title": "Sơ chế đậu que",
+        "instruction": "Rửa đậu que, tước bỏ phần xơ ở hai bên nếu có rồi cắt khúc vừa ăn. Bóc vỏ và băm nhỏ tỏi.",
+        "time_minutes": 4,
+        "visual_sign": "Đậu que sạch, cắt thành các khúc tương đối đều.",
+        "safety_note": "Cẩn thận khi dùng dao."
+      },
+      {
+        "title": "Phi thơm tỏi",
+        "instruction": "Làm nóng chảo ở lửa vừa, thêm dầu và tỏi. Đảo nhanh đến khi tỏi thơm, hơi vàng.",
+        "time_minutes": 1,
+        "visual_sign": "Tỏi dậy mùi thơm, chưa chuyển màu nâu sẫm.",
+        "safety_note": "Không để tỏi cháy hoặc dầu bốc khói."
+      },
+      {
+        "title": "Xào đậu que",
+        "instruction": "Cho đậu que vào chảo, đảo đều. Thêm 2–3 muỗng canh nước, đậy nắp ngắn để đậu chín mềm; sau đó mở nắp đảo tiếp.",
+        "time_minutes": 8,
+        "visual_sign": "Đậu chuyển xanh tươi, mềm khi bẻ thử và không còn sống cứng.",
+        "safety_note": "Cẩn thận hơi nóng khi mở nắp."
+      },
+      {
+        "title": "Nêm và hoàn thành",
+        "instruction": "Thêm muối vừa ăn, đảo đều đến khi đậu chín hoàn toàn rồi tắt bếp.",
+        "time_minutes": 2,
+        "visual_sign": "Đậu mềm vừa, nóng đều và tỏi bám quanh đậu.",
+        "safety_note": "Không ăn đậu que còn sống hoặc chưa chín kỹ."
+      }
+    ]
+  },
+  {
+    "id": "nam-xao-dau-phu",
+    "name": "Nấm xào đậu phụ",
+    "category": "Món chay",
+    "difficulty": "Dễ",
+    "time_minutes": 18,
+    "kcal_estimate_per_serving": 190,
+    "ingredients": [
+      {
+        "name": "nấm",
+        "amount": "150 g"
+      },
+      {
+        "name": "đậu phụ",
+        "amount": "1 bìa"
+      },
+      {
+        "name": "hành lá",
+        "amount": "1 ít"
+      },
+      {
+        "name": "dầu ăn",
+        "amount": "1 muỗng canh"
+      },
+      {
+        "name": "nước tương",
+        "amount": "1 muỗng canh"
+      }
+    ],
+    "tags": [
+      "chay",
+      "mặn",
+      "nhanh"
+    ],
+    "steps": [
+      {
+        "title": "Sơ chế",
+        "instruction": "Làm sạch nấm theo hướng dẫn phù hợp với loại nấm, cắt bỏ phần gốc bẩn. Cắt đậu phụ thành miếng vừa ăn và thái hành lá.",
+        "time_minutes": 4,
+        "visual_sign": "Nấm sạch, đậu phụ cắt miếng đều.",
+        "safety_note": "Chỉ sử dụng nấm ăn được có nguồn gốc rõ ràng."
+      },
+      {
+        "title": "Áp chảo đậu phụ",
+        "instruction": "Làm nóng chảo với một ít dầu ở lửa vừa. Cho đậu phụ vào áp chảo nhẹ các mặt đến khi vàng nhạt, gắp ra đĩa.",
+        "time_minutes": 5,
+        "visual_sign": "Mặt ngoài đậu phụ se và hơi vàng.",
+        "safety_note": "Đặt đậu nhẹ tay để tránh dầu bắn."
+      },
+      {
+        "title": "Xào nấm",
+        "instruction": "Cho nấm vào chảo, đảo đến khi nấm mềm và tiết một ít nước. Thêm nước tương, đảo đều.",
+        "time_minutes": 5,
+        "visual_sign": "Nấm mềm, nóng đều và hơi co lại.",
+        "safety_note": "Không dùng nấm có mùi lạ hoặc dấu hiệu hỏng."
+      },
+      {
+        "title": "Hoàn thiện",
+        "instruction": "Cho đậu phụ trở lại chảo, đảo nhẹ cùng nấm. Thêm hành lá, nấu thêm một phút rồi tắt bếp.",
+        "time_minutes": 4,
+        "visual_sign": "Đậu phụ nóng đều, nấm chín và gia vị phủ quanh món.",
+        "safety_note": "Tránh đảo mạnh làm nát đậu phụ."
+      }
+    ]
+  },
+  {
+    "id": "sup-ga-rau-cu",
+    "name": "Súp gà rau củ",
+    "category": "Món súp",
+    "difficulty": "Dễ",
+    "time_minutes": 30,
+    "kcal_estimate_per_serving": 220,
+    "ingredients": [
+      {
+        "name": "thịt gà",
+        "amount": "150 g"
+      },
+      {
+        "name": "cà rốt",
+        "amount": "1 củ nhỏ"
+      },
+      {
+        "name": "bắp",
+        "amount": "1/2 trái"
+      },
+      {
+        "name": "nước",
+        "amount": "700 ml"
+      },
+      {
+        "name": "hành lá",
+        "amount": "1 ít"
+      },
+      {
+        "name": "muối",
+        "amount": "vừa đủ"
+      }
+    ],
+    "tags": [
+      "mặn",
+      "món nhẹ"
+    ],
+    "steps": [
+      {
+        "title": "Sơ chế",
+        "instruction": "Rửa cà rốt, gọt vỏ và cắt hạt lựu. Tách hạt bắp nếu dùng bắp trái. Rửa thịt gà và cắt miếng nhỏ.",
+        "time_minutes": 6,
+        "visual_sign": "Rau củ được cắt nhỏ tương đối đều.",
+        "safety_note": "Dùng thớt riêng cho thịt gà sống và rau củ."
+      },
+      {
+        "title": "Luộc gà",
+        "instruction": "Cho gà vào nồi cùng nước, đun sôi rồi hạ lửa vừa. Hớt bọt nếu có và nấu đến khi gà chín hoàn toàn.",
+        "time_minutes": 10,
+        "visual_sign": "Thịt gà chuyển màu đục cả bên trong, nước dùng sôi nhẹ.",
+        "safety_note": "Không ăn thịt gà chưa chín kỹ."
+      },
+      {
+        "title": "Nấu rau củ",
+        "instruction": "Vớt gà ra để nguội bớt rồi xé nhỏ bằng dụng cụ sạch. Cho cà rốt và bắp vào nồi nước dùng, nấu đến khi mềm.",
+        "time_minutes": 9,
+        "visual_sign": "Cà rốt mềm khi xiên nhẹ, bắp nóng chín.",
+        "safety_note": "Cẩn thận nước dùng nóng và hơi nước."
+      },
+      {
+        "title": "Hoàn thành súp",
+        "instruction": "Cho thịt gà trở lại nồi, nêm muối vừa ăn, thêm hành lá và đun sôi nhẹ thêm một phút.",
+        "time_minutes": 5,
+        "visual_sign": "Thịt gà, rau củ nóng đều; súp sôi nhẹ.",
+        "safety_note": "Để súp nguội bớt trước khi ăn."
+      }
+    ]
+  },
+  {
+    "id": "salad-dua-chuot-ca-chua",
+    "name": "Salad dưa chuột cà chua",
+    "category": "Món rau",
+    "difficulty": "Rất dễ",
+    "time_minutes": 10,
+    "kcal_estimate_per_serving": 90,
+    "ingredients": [
+      {
+        "name": "dưa chuột",
+        "amount": "1 quả"
+      },
+      {
+        "name": "cà chua",
+        "amount": "1 quả"
+      },
+      {
+        "name": "rau xà lách",
+        "amount": "1 ít"
+      },
+      {
+        "name": "chanh",
+        "amount": "1/2 quả"
+      },
+      {
+        "name": "muối",
+        "amount": "một nhúm nhỏ"
+      }
+    ],
+    "tags": [
+      "chay",
+      "nhanh",
+      "không cần nấu"
+    ],
+    "steps": [
+      {
+        "title": "Rửa rau củ",
+        "instruction": "Rửa dưa chuột, cà chua và xà lách dưới vòi nước sạch. Để ráo nước.",
+        "time_minutes": 3,
+        "visual_sign": "Rau củ sạch, không còn đất cát nhìn thấy được.",
+        "safety_note": "Dùng nước sạch để rửa rau củ."
+      },
+      {
+        "title": "Cắt nguyên liệu",
+        "instruction": "Cắt dưa chuột thành lát mỏng, cà chua thành múi nhỏ; xé xà lách thành miếng vừa ăn.",
+        "time_minutes": 3,
+        "visual_sign": "Các miếng rau củ có kích thước vừa ăn.",
+        "safety_note": "Cẩn thận khi dùng dao."
+      },
+      {
+        "title": "Pha nước trộn",
+        "instruction": "Vắt chanh vào chén nhỏ, bỏ hạt. Thêm một nhúm muối và khuấy đều.",
+        "time_minutes": 2,
+        "visual_sign": "Muối tan trong nước cốt chanh.",
+        "safety_note": "Tránh để nước chanh dính vào mắt."
+      },
+      {
+        "title": "Trộn salad",
+        "instruction": "Cho rau củ vào tô, rưới nước trộn từ từ và đảo nhẹ. Dùng ngay sau khi trộn.",
+        "time_minutes": 2,
+        "visual_sign": "Rau củ được phủ một lớp nước trộn mỏng.",
+        "safety_note": "Bảo quản lạnh nếu chưa dùng ngay; không dùng rau có dấu hiệu hỏng."
+      }
+    ]
+  },
+  {
+    "id": "chao-thit-bam",
+    "name": "Cháo thịt băm",
+    "category": "Món cháo",
+    "difficulty": "Dễ",
+    "time_minutes": 30,
+    "kcal_estimate_per_serving": 230,
+    "ingredients": [
+      {
+        "name": "gạo",
+        "amount": "1/2 bát"
+      },
+      {
+        "name": "thịt heo",
+        "amount": "100 g"
+      },
+      {
+        "name": "hành lá",
+        "amount": "1 ít"
+      },
+      {
+        "name": "nước",
+        "amount": "800 ml"
+      },
+      {
+        "name": "muối",
+        "amount": "vừa đủ"
+      }
+    ],
+    "tags": [
+      "mặn",
+      "món nhẹ"
+    ],
+    "steps": [
+      {
+        "title": "Vo gạo và sơ chế",
+        "instruction": "Vo gạo nhẹ với nước sạch. Băm nhỏ thịt heo, rửa và thái nhỏ hành lá.",
+        "time_minutes": 5,
+        "visual_sign": "Gạo sạch, thịt được băm nhỏ.",
+        "safety_note": "Rửa tay và dụng cụ sau khi tiếp xúc với thịt sống."
+      },
+      {
+        "title": "Nấu cháo",
+        "instruction": "Cho gạo và nước vào nồi. Đun sôi rồi hạ lửa nhỏ, khuấy đáy nồi định kỳ để gạo không dính đáy.",
+        "time_minutes": 15,
+        "visual_sign": "Hạt gạo nở, nước cháo sánh dần và sôi lăn tăn.",
+        "safety_note": "Để hé nắp và chú ý cháo nóng có thể trào."
+      },
+      {
+        "title": "Nấu thịt",
+        "instruction": "Cho thịt băm vào nồi, khuấy tơi để thịt không vón cục. Tiếp tục nấu đến khi thịt chín hoàn toàn.",
+        "time_minutes": 7,
+        "visual_sign": "Thịt tơi đều, không còn màu sống; cháo mềm.",
+        "safety_note": "Thịt băm cần được nấu chín kỹ."
+      },
+      {
+        "title": "Nêm cháo",
+        "instruction": "Nêm muối từng ít một, khuấy đều. Thêm hành lá rồi tắt bếp.",
+        "time_minutes": 3,
+        "visual_sign": "Cháo sánh, thịt chín và nóng đều.",
+        "safety_note": "Để cháo nguội bớt trước khi ăn."
+      }
+    ]
+  },
+  {
+    "id": "trung-cuon-rau-cu",
+    "name": "Trứng cuộn rau củ",
+    "category": "Món trứng",
+    "difficulty": "Dễ",
+    "time_minutes": 15,
+    "kcal_estimate_per_serving": 220,
+    "ingredients": [
+      {
+        "name": "trứng",
+        "amount": "3 quả"
+      },
+      {
+        "name": "cà rốt",
+        "amount": "1/3 củ"
+      },
+      {
+        "name": "hành lá",
+        "amount": "1 ít"
+      },
+      {
+        "name": "dầu ăn",
+        "amount": "1 muỗng cà phê"
+      },
+      {
+        "name": "muối",
+        "amount": "một ít"
+      }
+    ],
+    "tags": [
+      "mặn",
+      "nhanh",
+      "người mới"
+    ],
+    "steps": [
+      {
+        "title": "Chuẩn bị rau củ",
+        "instruction": "Rửa cà rốt và hành lá. Gọt vỏ cà rốt, băm thật nhỏ; thái nhỏ hành lá. Đập trứng vào bát.",
+        "time_minutes": 4,
+        "visual_sign": "Cà rốt được băm nhỏ để dễ chín khi cuộn.",
+        "safety_note": "Cẩn thận khi dùng dao."
+      },
+      {
+        "title": "Trộn trứng",
+        "instruction": "Cho cà rốt, hành lá và một ít muối vào trứng, đánh đều.",
+        "time_minutes": 2,
+        "visual_sign": "Rau củ phân bố đều trong hỗn hợp trứng.",
+        "safety_note": "Rửa tay sau khi tiếp xúc với trứng sống."
+      },
+      {
+        "title": "Chiên lớp trứng đầu",
+        "instruction": "Làm nóng chảo chống dính với ít dầu ở lửa nhỏ vừa. Đổ một lớp trứng mỏng, chờ mặt dưới đông lại và mặt trên se bớt.",
+        "time_minutes": 3,
+        "visual_sign": "Lớp trứng đủ chắc để cuộn nhưng mặt trên vẫn hơi ẩm.",
+        "safety_note": "Cẩn thận chảo nóng."
+      },
+      {
+        "title": "Cuộn và làm chín",
+        "instruction": "Dùng xẻng cuộn trứng từ một mép, đẩy cuộn trứng sang bên chảo. Đổ phần trứng còn lại vào, chờ se rồi cuộn tiếp. Chiên thêm đến khi trứng và cà rốt chín hoàn toàn.",
+        "time_minutes": 6,
+        "visual_sign": "Cuộn trứng giữ được hình dạng, bên trong không còn trứng lỏng và cà rốt mềm.",
+        "safety_note": "Dùng xẻng, không chạm tay vào chảo nóng."
+      }
+    ]
+  }
+]
