@@ -94,7 +94,7 @@ async function recommend(){
  try{
   const ingredients=$('ingredients').value.split(',').map(s=>s.trim()).filter(Boolean);
   const data=await api('/api/recommend',{ingredients,goals:goals(),diet:goals().includes('Ăn chay')?'Ăn chay':goals().includes('Ăn mặn')?'Ăn mặn':'Không yêu cầu',servings:Number($('servings').value),time_limit_minutes:Number($('time').value),budget_vnd:Number($('budget').value)||0,skill:goals().includes('Người mới nấu')?'Người mới nấu':'Cơ bản'});
-  $('summary').textContent=data.summary+(data.source==='openai'?' · 🤖 AI thật':' · 🧪 Demo');
+  $('summary').textContent = data.summary + ' · 🌿 Kho công thức ECOMEAL';
   if(data.needs_clarification){$('recipes').innerHTML='<div class="tip"><b>ECOMEAL - BẾP THÔNG MINH cần thêm thông tin:</b><ul>'+data.clarification_questions.map(q=>'<li>'+esc(q)+'</li>').join('')+'</ul></div>';go(4);return}
   window._recipes=data.recipes||[];
   $('recipes').innerHTML=window._recipes.map((r,i)=>`<div class="recipe"><div class="rtop"><div class="food">${emoji(r.name)}</div><div><h3>${esc(r.name)}</h3><div class="muted">${esc(r.why_fit)}</div><div class="badges"><span class="badge">⏱ ${r.time_minutes} phút</span><span class="badge">⭐ ${esc(r.difficulty)}</span><span class="badge">~${r.kcal_estimate_per_serving} kcal*</span></div></div></div><button class="choose" onclick="detail(${i})">Chọn món →</button></div>`).join('');
