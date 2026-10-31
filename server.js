@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import OpenAI from "openai";
 import path from "path";
 import { fileURLToPath } from "url";
+import { readFile } from "node:fs/promises";
 
 dotenv.config();
 
@@ -117,6 +118,53 @@ function cleanStringArray(value) {
   if (!Array.isArray(value)) return [];
   return value.map(x => String(x).trim()).filter(Boolean).slice(0, 30);
 }
+
+async function loadRecipes() {
+  const filePath = path.join(__dirname, "recipes.json");
+  const data = await readFile(filePath, "utf8");
+  const recipes = JSON.parse(data);
+
+  if (!Array.isArray(recipes)) {
+    throw new Error("recipes.json phải chứa một mảng công thức.");
+  }
+
+  return recipes;
+}
+
+function normalizeIngredient(value) {
+  return String(value || "")
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, " ");
+}
+
+function findMatchingRecipes(userIngredients, recipes) {
+  const input = userIngredients.map(normalizeIngredient);
+
+  return recipes
+    .map(recipe => {
+      const recipeIngredients = (recipe.ingredients || [])
+        .map(item => normalizeIngredient(item.name));
+
+      const matched = recipeIngredients.filter(name =>
+        input.some(userItem =>
+          userItem === name ||
+          ` ${userItem} `.includes(` ${name} `) ||
+          ` ${name} `.includes(` ${userItem} `)
+        )
+      );
+
+      return {
+        recipe,
+        matched,
+        score: matched.length
+      };
+    })
+    .filter(item => item.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3);
+}
+
 
 function demoRecommendations(body) {
   const servings = Number(body.servings) || 2;
@@ -356,46 +404,64 @@ app.get("/api/health", (req, res) => {
   res.json({ ok: true, ai_configured: Boolean(client), model: MODEL });
 });
 
+
 app.post("/api/recommend", async (req, res) => {
   try {
     const body = req.body || {};
-    const ingredients = cleanStringArray(body.ingredients);
-    if (!ingredients.length) return res.status(400).json({ error: "Vui lòng nhập ít nhất một nguyên liệu." });
 
-    const payload = {
-      ingredients,
-      diet: String(body.diet || "Không yêu cầu"),
-      goals: cleanStringArray(body.goals),
-      servings: Number(body.servings) || 2,
-      time_limit_minutes: Number(body.time_limit_minutes) || 0,
-      budget_vnd: Number(body.budget_vnd) || 0,
-      skill: String(body.skill || "Người mới nấu")
-    };
+    const ingredients = Array.isArray(body.ingredients)
+      ? cleanStringArray(body.ingredients)
+      : String(body.ingredients || "")
+          .split(/[,;\n]+/)
+          .map(x => x.trim())
+          .filter(Boolean);
 
-    if (!client) return res.json({ source: "demo", ...demoRecommendations(payload) });
-
-    const result = await callAI("bep_ai_recommendations", recommendationSchema, `
-Hãy đề xuất tối đa 3 món ăn cho dữ liệu sau.
-Dữ liệu người dùng:
-${JSON.stringify(payload, null, 2)}
-
-Yêu cầu:
-- Chỉ đề xuất món phù hợp với chế độ ăn.
-- Ưu tiên nguyên liệu đang có.
-- Nếu thời gian hoặc ngân sách được cung cấp, cố gắng tuân thủ.
-- Nếu kcal không thể tính chính xác, ước tính hợp lý và đánh dấu kcal_is_estimate=true.
-- Không bịa rằng người dùng có nguyên liệu mà họ không cung cấp.
-- Nếu không thể đưa ra đề xuất an toàn/hợp lý, dùng needs_clarification=true.
-`);
-    res.json({ source: "openai", model: MODEL, ...result });
-  } catch (err) {
-    console.error(err);
-    if (err.message === "MISSING_API_KEY") {
-      return res.status(503).json({ error: "Server chưa có OPENAI_API_KEY. Hãy cấu hình biến môi trường." });
+    if (!ingredients.length) {
+      return res.status(400).json({
+        error: "Vui lòng nhập ít nhất một nguyên liệu."
+      });
     }
-    res.status(500).json({ error: "ECOMEAL gặp lỗi khi tạo gợi ý. Hãy thử lại." });
+
+    const recipes = await loadRecipes();
+    const matches = findMatchingRecipes(ingredients, recipes);
+    const servings = Number(body.servings) || 2;
+
+    const results = matches.map(({ recipe, matched }) => ({
+      name: recipe.name,
+      difficulty: recipe.difficulty || "Chưa xác định",
+      time_minutes: Number(recipe.time_minutes) || 0,
+      servings,
+      kcal_estimate_per_serving:
+        Number(recipe.kcal_estimate_per_serving) || 0,
+      kcal_is_estimate: true,
+      ingredients_have: matched,
+      ingredients_buy: (recipe.ingredients || [])
+        .filter(item =>
+          !matched.includes(normalizeIngredient(item.name))
+        )
+        .map(item => `${item.name} (${item.amount})`),
+      why_fit: `Món này sử dụng ${matched.join(", ")} trong những nguyên liệu bạn đang có.`
+    }));
+
+    return res.json({
+      source: "recipes",
+      needs_clarification: false,
+      clarification_questions: [],
+      summary: results.length
+        ? `ECOMEAL tìm được ${results.length} món phù hợp trong kho công thức.`
+        : "Chưa tìm thấy món phù hợp trong kho công thức. Bạn hãy thử nhập nguyên liệu khác.",
+      recipes: results
+    });
+
+  } catch (err) {
+    console.error("Lỗi đọc kho công thức:", err);
+
+    return res.status(500).json({
+      error: "Không đọc được kho công thức. Hãy kiểm tra file recipes.json."
+    });
   }
 });
+
 
 app.post("/api/cook-step", async (req, res) => {
   try {
