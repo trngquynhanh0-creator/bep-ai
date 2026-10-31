@@ -1144,5 +1144,470 @@
         "safety_note": "Dùng xẻng, không chạm tay vào chảo nóng."
       }
     ]
-  }
+  },
+  ,
+{
+  "id": "bo-xao-luc-lac",
+  "name": "Bò xào lúc lắc",
+  "category": "Món thịt bò",
+  "difficulty": "Dễ",
+  "time_minutes": 20,
+  "kcal_estimate_per_serving": 320,
+  "ingredients": [
+    {"name": "thịt bò", "amount": "250g"},
+    {"name": "ớt chuông", "amount": "1 quả"},
+    {"name": "hành tây", "amount": "1/2 củ"},
+    {"name": "tỏi", "amount": "2 tép"},
+    {"name": "dầu ăn", "amount": "1 muỗng canh"},
+    {"name": "nước tương", "amount": "1 muỗng canh"}
+  ],
+  "tags": ["mặn", "nhanh"],
+  "steps": [
+    {
+      "title": "Chuẩn bị nguyên liệu",
+      "instruction": "Rửa sạch thịt bò, ớt chuông và hành tây. Cắt thịt bò thành miếng vuông vừa ăn, ớt chuông và hành tây thành miếng nhỏ. Băm tỏi.",
+      "time_minutes": 5,
+      "visual_sign": "Các nguyên liệu được cắt thành miếng tương đối đều.",
+      "safety_note": "Rửa tay và dụng cụ sau khi tiếp xúc với thịt sống."
+    },
+    {
+      "title": "Ướp thịt bò",
+      "instruction": "Cho thịt bò vào tô, thêm nước tương và một ít tiêu. Trộn đều và để khoảng 5 phút.",
+      "time_minutes": 5,
+      "visual_sign": "Gia vị bám đều quanh miếng thịt.",
+      "safety_note": "Không dùng lại nước ướp thịt sống làm nước chấm."
+    },
+    {
+      "title": "Xào thịt bò",
+      "instruction": "Làm nóng chảo với dầu ở lửa vừa. Cho tỏi vào phi thơm, sau đó cho thịt bò vào xào đến khi thịt chín.",
+      "time_minutes": 5,
+      "visual_sign": "Thịt không còn phần sống bên trong.",
+      "safety_note": "Cẩn thận dầu nóng bắn ra khỏi chảo."
+    },
+    {
+      "title": "Hoàn thành món ăn",
+      "instruction": "Cho ớt chuông và hành tây vào xào cùng. Đảo đều đến khi rau củ vừa mềm, nêm lại gia vị rồi tắt bếp.",
+      "time_minutes": 5,
+      "visual_sign": "Rau củ chín vừa, thịt bò nóng đều.",
+      "safety_note": "Dùng dụng cụ sạch để lấy món ăn."
+    }
+  ]
+},
+{
+  "id": "suon-non-rim-man-ngot",
+  "name": "Sườn non rim mặn ngọt",
+  "category": "Món thịt heo",
+  "difficulty": "Vừa",
+  "time_minutes": 35,
+  "kcal_estimate_per_serving": 380,
+  "ingredients": [
+    {"name": "sườn non", "amount": "400g"},
+    {"name": "tỏi", "amount": "3 tép"},
+    {"name": "nước mắm", "amount": "2 muỗng canh"},
+    {"name": "đường", "amount": "1 muỗng canh"},
+    {"name": "nước lọc", "amount": "100ml"},
+    {"name": "dầu ăn", "amount": "1 muỗng canh"}
+  ],
+  "tags": ["mặn", "cơm nhà"],
+  "steps": [
+    {
+      "title": "Sơ chế sườn",
+      "instruction": "Rửa sườn dưới vòi nước sạch, chặt thành miếng vừa ăn. Có thể chần sườn qua nước sôi rồi rửa lại.",
+      "time_minutes": 7,
+      "visual_sign": "Sườn sạch, không còn vụn xương.",
+      "safety_note": "Cẩn thận khi sử dụng dao chặt."
+    },
+    {
+      "title": "Pha nước rim",
+      "instruction": "Trộn nước mắm, đường và nước lọc trong một chiếc bát.",
+      "time_minutes": 3,
+      "visual_sign": "Đường tan bớt trong hỗn hợp nước mắm.",
+      "safety_note": "Dùng bát sạch."
+    },
+    {
+      "title": "Nấu sườn",
+      "instruction": "Phi thơm tỏi với dầu, cho sườn vào đảo đều. Thêm hỗn hợp nước rim, đậy nắp và nấu ở lửa nhỏ.",
+      "time_minutes": 20,
+      "visual_sign": "Sườn chuyển màu và nước rim bắt đầu sánh lại.",
+      "safety_note": "Đảm bảo sườn được nấu chín hoàn toàn."
+    },
+    {
+      "title": "Hoàn thành",
+      "instruction": "Mở nắp, đảo đều để nước sốt bám quanh sườn. Khi sườn mềm và nước sốt sánh thì tắt bếp.",
+      "time_minutes": 5,
+      "visual_sign": "Sườn mềm, chín bên trong và được phủ lớp sốt.",
+      "safety_note": "Cẩn thận hơi nóng khi mở nắp nồi."
+    }
+  ]
+},
+{
+  "id": "tom-rang-thit",
+  "name": "Tôm rang thịt",
+  "category": "Món hải sản",
+  "difficulty": "Dễ",
+  "time_minutes": 25,
+  "kcal_estimate_per_serving": 350,
+  "ingredients": [
+    {"name": "tôm", "amount": "200g"},
+    {"name": "thịt ba chỉ", "amount": "150g"},
+    {"name": "hành tím", "amount": "2 củ"},
+    {"name": "nước mắm", "amount": "1 muỗng canh"},
+    {"name": "đường", "amount": "1 muỗng cà phê"},
+    {"name": "dầu ăn", "amount": "1 muỗng canh"}
+  ],
+  "tags": ["mặn", "cơm nhà"],
+  "steps": [
+    {
+      "title": "Sơ chế",
+      "instruction": "Bóc vỏ tôm, bỏ chỉ lưng và rửa sạch. Thịt ba chỉ rửa sạch, cắt miếng mỏng. Băm hành tím.",
+      "time_minutes": 5,
+      "visual_sign": "Tôm và thịt được sơ chế sạch.",
+      "safety_note": "Rửa tay và dụng cụ sau khi sơ chế hải sản sống."
+    },
+    {
+      "title": "Xào thịt",
+      "instruction": "Cho dầu vào chảo, phi thơm hành tím rồi cho thịt vào đảo đều.",
+      "time_minutes": 7,
+      "visual_sign": "Thịt săn lại và chuyển màu.",
+      "safety_note": "Cẩn thận dầu nóng."
+    },
+    {
+      "title": "Rang tôm",
+      "instruction": "Cho tôm vào chảo, đảo đều cùng thịt. Thêm nước mắm và đường, tiếp tục nấu đến khi tôm chín.",
+      "time_minutes": 8,
+      "visual_sign": "Tôm chuyển màu hồng cam và thịt chín hoàn toàn.",
+      "safety_note": "Không ăn tôm còn sống hoặc chưa chín."
+    },
+    {
+      "title": "Hoàn thành",
+      "instruction": "Đảo đều cho gia vị thấm vào tôm và thịt. Nếm lại, điều chỉnh gia vị rồi tắt bếp.",
+      "time_minutes": 5,
+      "visual_sign": "Tôm và thịt có màu đẹp, nước sốt bám đều.",
+      "safety_note": "Dùng dụng cụ sạch khi lấy thức ăn."
+    }
+  ]
+},
+{
+  "id": "canh-chua-ca",
+  "name": "Canh chua cá",
+  "category": "Món canh",
+  "difficulty": "Vừa",
+  "time_minutes": 30,
+  "kcal_estimate_per_serving": 220,
+  "ingredients": [
+    {"name": "cá", "amount": "300g"},
+    {"name": "cà chua", "amount": "2 quả"},
+    {"name": "dứa", "amount": "1/4 quả"},
+    {"name": "giá đỗ", "amount": "100g"},
+    {"name": "me", "amount": "1 ít"},
+    {"name": "hành lá", "amount": "1 ít"},
+    {"name": "nước mắm", "amount": "1 muỗng canh"}
+  ],
+  "tags": ["mặn", "món canh"],
+  "steps": [
+    {
+      "title": "Sơ chế nguyên liệu",
+      "instruction": "Làm sạch cá, cắt thành khúc vừa ăn. Rửa cà chua, dứa và giá đỗ. Cắt cà chua thành múi, dứa thành miếng.",
+      "time_minutes": 7,
+      "visual_sign": "Các nguyên liệu được làm sạch và để riêng.",
+      "safety_note": "Cẩn thận với xương cá và dao."
+    },
+    {
+      "title": "Nấu nước canh",
+      "instruction": "Đun sôi khoảng 700ml nước. Cho cà chua, dứa và nước me vào nồi, nấu vài phút.",
+      "time_minutes": 5,
+      "visual_sign": "Nước canh sôi nhẹ và cà chua bắt đầu mềm.",
+      "safety_note": "Cẩn thận nước sôi và hơi nóng."
+    },
+    {
+      "title": "Nấu cá",
+      "instruction": "Cho cá vào nồi, hạ lửa vừa và nấu đến khi cá chín hoàn toàn. Hạn chế khuấy mạnh để cá không bị nát.",
+      "time_minutes": 12,
+      "visual_sign": "Thịt cá chuyển đục và dễ tách thành thớ.",
+      "safety_note": "Đảm bảo cá chín hoàn toàn trước khi ăn."
+    },
+    {
+      "title": "Hoàn thành",
+      "instruction": "Cho giá đỗ và hành lá vào, nêm nước mắm vừa ăn. Đun thêm một chút rồi tắt bếp.",
+      "time_minutes": 6,
+      "visual_sign": "Giá vừa chín, nước canh có vị chua dịu.",
+      "safety_note": "Cẩn thận hơi nóng khi múc canh."
+    }
+  ]
+},
+{
+  "id": "mi-xao-bo",
+  "name": "Mì xào bò",
+  "category": "Món mì",
+  "difficulty": "Dễ",
+  "time_minutes": 20,
+  "kcal_estimate_per_serving": 420,
+  "ingredients": [
+    {"name": "mì gói", "amount": "2 gói"},
+    {"name": "thịt bò", "amount": "150g"},
+    {"name": "cải thìa", "amount": "100g"},
+    {"name": "tỏi", "amount": "2 tép"},
+    {"name": "dầu ăn", "amount": "1 muỗng canh"}
+  ],
+  "tags": ["nhanh", "mặn"],
+  "steps": [
+    {
+      "title": "Chuẩn bị nguyên liệu",
+      "instruction": "Ngâm hoặc trụng mì theo hướng dẫn trên bao bì, sau đó để ráo. Rửa cải thìa, cắt khúc. Thái thịt bò thành lát mỏng.",
+      "time_minutes": 5,
+      "visual_sign": "Mì mềm vừa, không bị nhũn.",
+      "safety_note": "Cẩn thận nước nóng khi trụng mì."
+    },
+    {
+      "title": "Xào thịt bò",
+      "instruction": "Phi thơm tỏi với dầu, cho thịt bò vào xào ở lửa vừa đến khi chín hoàn toàn.",
+      "time_minutes": 5,
+      "visual_sign": "Thịt bò không còn phần sống bên trong.",
+      "safety_note": "Cẩn thận dầu nóng bắn."
+    },
+    {
+      "title": "Xào rau và mì",
+      "instruction": "Cho cải thìa vào chảo, đảo đến khi rau hơi mềm. Thêm mì và một ít gia vị theo khẩu vị.",
+      "time_minutes": 6,
+      "visual_sign": "Rau chín vừa, mì nóng đều.",
+      "safety_note": "Đảo nhẹ để mì không văng khỏi chảo."
+    },
+    {
+      "title": "Hoàn thành",
+      "instruction": "Cho thịt bò trở lại chảo, trộn đều các nguyên liệu rồi tắt bếp.",
+      "time_minutes": 4,
+      "visual_sign": "Mì, rau và thịt hòa đều, món ăn nóng.",
+      "safety_note": "Ăn khi món còn nóng vừa phải."
+    }
+  ]
+},
+{
+  "id": "bun-tron-thit-nuong",
+  "name": "Bún trộn thịt nướng",
+  "category": "Món bún",
+  "difficulty": "Vừa",
+  "time_minutes": 35,
+  "kcal_estimate_per_serving": 450,
+  "ingredients": [
+    {"name": "bún tươi", "amount": "300g"},
+    {"name": "thịt heo", "amount": "200g"},
+    {"name": "dưa chuột", "amount": "1 quả"},
+    {"name": "rau sống", "amount": "100g"},
+    {"name": "nước mắm", "amount": "2 muỗng canh"},
+    {"name": "đường", "amount": "1 muỗng canh"}
+  ],
+  "tags": ["mặn", "món bún"],
+  "steps": [
+    {
+      "title": "Sơ chế",
+      "instruction": "Rửa sạch thịt, thái lát mỏng. Rửa rau sống và dưa chuột, để ráo. Cắt dưa chuột thành sợi.",
+      "time_minutes": 7,
+      "visual_sign": "Rau sạch, thịt được thái đều.",
+      "safety_note": "Không dùng chung dao thớt cho thịt sống và rau ăn sống."
+    },
+    {
+      "title": "Ướp thịt",
+      "instruction": "Trộn thịt với một ít nước mắm, đường và tiêu. Để khoảng 10 phút cho thấm.",
+      "time_minutes": 10,
+      "visual_sign": "Gia vị bám đều quanh miếng thịt.",
+      "safety_note": "Để thịt trong ngăn mát nếu chưa chế biến ngay."
+    },
+    {
+      "title": "Nướng hoặc áp chảo thịt",
+      "instruction": "Nướng hoặc áp chảo thịt ở nhiệt độ phù hợp, lật đều đến khi thịt chín hoàn toàn.",
+      "time_minutes": 12,
+      "visual_sign": "Thịt chín bên trong, không còn phần sống.",
+      "safety_note": "Cẩn thận khi tiếp xúc với chảo hoặc vỉ nướng nóng."
+    },
+    {
+      "title": "Trình bày",
+      "instruction": "Cho bún vào tô, thêm rau sống, dưa chuột và thịt. Pha nước mắm với nước và đường theo khẩu vị rồi rưới lên.",
+      "time_minutes": 6,
+      "visual_sign": "Các nguyên liệu được xếp đều, nước trộn vừa vị.",
+      "safety_note": "Chỉ sử dụng rau sống đã được rửa sạch."
+    }
+  ]
+},
+{
+  "id": "khoai-tay-chien",
+  "name": "Khoai tây chiên",
+  "category": "Món ăn vặt",
+  "difficulty": "Dễ",
+  "time_minutes": 25,
+  "kcal_estimate_per_serving": 300,
+  "ingredients": [
+    {"name": "khoai tây", "amount": "2 củ"},
+    {"name": "dầu ăn", "amount": "300ml"},
+    {"name": "muối", "amount": "1/2 muỗng cà phê"}
+  ],
+  "tags": ["ăn vặt", "nhanh"],
+  "steps": [
+    {
+      "title": "Sơ chế khoai",
+      "instruction": "Gọt vỏ khoai tây, rửa sạch và cắt thành thanh vừa ăn. Ngâm khoai trong nước sạch khoảng 10 phút rồi để thật ráo.",
+      "time_minutes": 10,
+      "visual_sign": "Khoai được cắt đều và không còn đọng nước.",
+      "safety_note": "Cẩn thận khi dùng dao gọt."
+    },
+    {
+      "title": "Làm nóng dầu",
+      "instruction": "Cho dầu vào nồi sâu lòng, làm nóng ở mức vừa. Không để dầu bốc khói.",
+      "time_minutes": 3,
+      "visual_sign": "Dầu nóng nhưng không bốc khói.",
+      "safety_note": "Không cho khoai còn ướt vào dầu nóng."
+    },
+    {
+      "title": "Chiên khoai",
+      "instruction": "Cho khoai vào từng mẻ nhỏ, chiên đến khi khoai mềm và vàng nhẹ. Vớt ra để ráo.",
+      "time_minutes": 7,
+      "visual_sign": "Khoai vàng đều và mềm bên trong.",
+      "safety_note": "Không thả khoai từ trên cao hoặc để nước rơi vào dầu."
+    },
+    {
+      "title": "Hoàn thành",
+      "instruction": "Nếu muốn giòn hơn, chiên lại nhanh từng mẻ nhỏ đến khi vàng giòn. Rắc chút muối rồi dùng.",
+      "time_minutes": 5,
+      "visual_sign": "Khoai vàng, bề mặt giòn.",
+      "safety_note": "Tắt bếp và chờ dầu nguội hoàn toàn trước khi di chuyển nồi."
+    }
+  ]
+},
+{
+  "id": "bi-do-xao-toi",
+  "name": "Bí đỏ xào tỏi",
+  "category": "Món rau củ",
+  "difficulty": "Rất dễ",
+  "time_minutes": 15,
+  "kcal_estimate_per_serving": 160,
+  "ingredients": [
+    {"name": "bí đỏ", "amount": "300g"},
+    {"name": "tỏi", "amount": "2 tép"},
+    {"name": "dầu ăn", "amount": "1 muỗng canh"},
+    {"name": "muối", "amount": "1/3 muỗng cà phê"}
+  ],
+  "tags": ["nhanh", "rau củ"],
+  "steps": [
+    {
+      "title": "Sơ chế",
+      "instruction": "Gọt vỏ bí đỏ, bỏ hạt, rửa sạch và cắt thành lát mỏng vừa ăn. Băm nhỏ tỏi.",
+      "time_minutes": 4,
+      "visual_sign": "Bí đỏ được cắt thành miếng tương đối đều.",
+      "safety_note": "Cẩn thận khi gọt bí vì bí khá cứng."
+    },
+    {
+      "title": "Phi tỏi",
+      "instruction": "Làm nóng chảo với dầu ở lửa vừa, cho tỏi vào đảo nhẹ đến khi thơm.",
+      "time_minutes": 2,
+      "visual_sign": "Tỏi dậy mùi thơm, chưa chuyển màu nâu đậm.",
+      "safety_note": "Không để tỏi cháy."
+    },
+    {
+      "title": "Xào bí đỏ",
+      "instruction": "Cho bí đỏ vào chảo, đảo đều. Thêm một ít nước, đậy nắp và nấu đến khi bí mềm.",
+      "time_minutes": 7,
+      "visual_sign": "Dùng đũa xiên thử thấy bí mềm.",
+      "safety_note": "Cẩn thận hơi nóng khi mở nắp."
+    },
+    {
+      "title": "Hoàn thành",
+      "instruction": "Nêm muối vừa ăn, đảo nhẹ để bí không bị nát rồi tắt bếp.",
+      "time_minutes": 2,
+      "visual_sign": "Bí mềm, thấm gia vị và còn giữ hình dạng.",
+      "safety_note": "Dùng đũa sạch khi nếm thử."
+    }
+  ]
+},
+{
+  "id": "ca-tim-sot-thit-bam",
+  "name": "Cà tím sốt thịt băm",
+  "category": "Món rau củ",
+  "difficulty": "Dễ",
+  "time_minutes": 25,
+  "kcal_estimate_per_serving": 310,
+  "ingredients": [
+    {"name": "cà tím", "amount": "2 quả"},
+    {"name": "thịt heo băm", "amount": "150g"},
+    {"name": "tỏi", "amount": "2 tép"},
+    {"name": "hành lá", "amount": "1 ít"},
+    {"name": "nước mắm", "amount": "1 muỗng canh"},
+    {"name": "dầu ăn", "amount": "1 muỗng canh"}
+  ],
+  "tags": ["mặn", "cơm nhà"],
+  "steps": [
+    {
+      "title": "Chuẩn bị nguyên liệu",
+      "instruction": "Rửa cà tím, cắt khúc vừa ăn. Băm tỏi và thái nhỏ hành lá.",
+      "time_minutes": 5,
+      "visual_sign": "Cà tím được cắt thành miếng vừa ăn.",
+      "safety_note": "Rửa tay sau khi tiếp xúc với thịt sống."
+    },
+    {
+      "title": "Xào thịt băm",
+      "instruction": "Phi thơm tỏi với dầu, cho thịt băm vào đảo đều đến khi thịt chín.",
+      "time_minutes": 7,
+      "visual_sign": "Thịt đổi màu hoàn toàn và tơi ra.",
+      "safety_note": "Không ăn thịt băm còn sống."
+    },
+    {
+      "title": "Nấu cà tím",
+      "instruction": "Cho cà tím vào chảo, thêm một ít nước và nước mắm. Đậy nắp, nấu đến khi cà tím mềm.",
+      "time_minutes": 10,
+      "visual_sign": "Cà tím mềm và thấm nước sốt.",
+      "safety_note": "Cẩn thận hơi nóng khi mở nắp."
+    },
+    {
+      "title": "Hoàn thành",
+      "instruction": "Đảo nhẹ thịt và cà tím, nêm lại gia vị. Rắc hành lá rồi tắt bếp.",
+      "time_minutes": 3,
+      "visual_sign": "Thịt và cà tím hòa đều trong phần sốt sánh nhẹ.",
+      "safety_note": "Dùng dụng cụ sạch để lấy thức ăn."
+    }
+  ]
+},
+{
+  "id": "dau-hu-chien-sa",
+  "name": "Đậu hũ chiên sả",
+  "category": "Món đậu phụ",
+  "difficulty": "Dễ",
+  "time_minutes": 20,
+  "kcal_estimate_per_serving": 260,
+  "ingredients": [
+    {"name": "đậu phụ", "amount": "3 miếng"},
+    {"name": "sả", "amount": "2 cây"},
+    {"name": "tỏi", "amount": "2 tép"},
+    {"name": "dầu ăn", "amount": "3 muỗng canh"},
+    {"name": "nước tương", "amount": "1 muỗng canh"}
+  ],
+  "tags": ["ăn chay", "nhanh"],
+  "steps": [
+    {
+      "title": "Sơ chế",
+      "instruction": "Để đậu phụ ráo nước, cắt thành miếng vừa ăn. Băm nhỏ sả và tỏi.",
+      "time_minutes": 4,
+      "visual_sign": "Đậu phụ ráo, các miếng không bị vỡ.",
+      "safety_note": "Dùng dao cẩn thận khi cắt đậu."
+    },
+    {
+      "title": "Chiên đậu",
+      "instruction": "Làm nóng chảo với dầu ở lửa vừa. Cho đậu vào chiên các mặt đến khi vàng nhẹ, sau đó gắp ra.",
+      "time_minutes": 7,
+      "visual_sign": "Các mặt đậu vàng đều.",
+      "safety_note": "Đảm bảo đậu ráo nước để hạn chế dầu bắn."
+    },
+    {
+      "title": "Làm sốt sả",
+      "instruction": "Giữ lại một ít dầu trong chảo, cho sả và tỏi vào đảo ở lửa nhỏ đến khi thơm. Thêm nước tương và một chút nước.",
+      "time_minutes": 5,
+      "visual_sign": "Sả thơm, mềm và không bị cháy.",
+      "safety_note": "Không để tỏi và sả cháy."
+    },
+    {
+      "title": "Hoàn thành",
+      "instruction": "Cho đậu phụ vào chảo, đảo nhẹ để sốt bám đều. Đun thêm một chút rồi tắt bếp.",
+      "time_minutes": 4,
+      "visual_sign": "Đậu thấm sốt, nóng đều và không bị nát.",
+      "safety_note": "Dùng đũa sạch khi lấy món ăn."
+    }
+  ]
+}
 ]
