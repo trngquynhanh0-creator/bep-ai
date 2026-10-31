@@ -106,7 +106,7 @@ function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&l
 function detail(i){state.recipe=window._recipes[i];const r=state.recipe;$('detail').innerHTML=`<div class="detailimg">${emoji(r.name)}</div><h2>${esc(r.name)}</h2><p class="muted">${esc(r.why_fit)}</p><div class="info"><div class="ibox"><b>${r.time_minutes} phút</b><span>Thời gian</span></div><div class="ibox"><b>${esc(r.difficulty)}</b><span>Độ khó</span></div><div class="ibox"><b>~${r.kcal_estimate_per_serving}</b><span>kcal/phần*</span></div></div><h3>🛒 Nguyên liệu bạn có</h3><ul>${r.ingredients_have.map(x=>'<li>'+esc(x)+'</li>').join('')}</ul><h3>🛍 Có thể cần mua</h3><ul>${r.ingredients_buy.length?r.ingredients_buy.map(x=>'<li>'+esc(x)+'</li>').join(''):'<li>Không cần mua thêm theo đề xuất.</li>'}</ul><div class="tip">💡 ECOMEAL - BẾP THÔNG MINH sẽ hướng dẫn từng bước và chờ bạn xác nhận.</div><button class="primary" onclick="startCooking()">👨‍🍳 Cùng tôi nấu</button><div class="footer">*Kcal chỉ là ước tính.</div>`;go(5)}
 async function startCooking(){state.step=1;state.total=0;state.stepsCache={};await loadStep();go(6)}
 async function loadStep(){
- const box=$('step');box.innerHTML='<div class="tip">🤖 ECOMEAL - BẾP THÔNG MINH đang chuẩn bị bước này...</div>';
+ const box=$('step');box.innerHTML='<div class="tip"> Đang chuẩn bị hướng dẫn nấu ăn...</div>';
  try{const d=await api('/api/cook-step',{dish_name:state.recipe.name,recipe:state.recipe,step_number:state.step,previous_step:state.stepsCache[state.step-1]||null});
  state.total=d.total_steps;state.stepsCache[state.step]=d;
  box.innerHTML=`<div class="muted">${d.step_number}/${d.total_steps} · ⏱ ${d.time_minutes} phút</div><div class="stepimg">${state.step===1?'🔪':state.step===2?'🔥':state.step===3?'🍳':'✨'}</div><span class="badge">Bước ${d.step_number}</span><h2>${esc(d.title)}</h2><p>${esc(d.instruction)}</p><div class="tip">👀 <b>Dấu hiệu:</b> ${esc(d.visual_sign)}</div>${d.safety_note?'<div class="warn">⚠️ '+esc(d.safety_note)+'</div>':''}<p class="muted">${esc(d.done_question)}</p>`;
@@ -115,7 +115,7 @@ async function loadStep(){
 }
 async function nextStep(){if(state.step<state.total){state.step++;await loadStep()}else{alert('🎉 Bạn đã hoàn thành món! Chúc ngon miệng!')}}
 async function prevStep(){if(state.step>1){state.step--;await loadStep()}}
-async function troubleshoot(){const p=$('problem').value.trim();if(!p)return alert('Hãy mô tả sự cố trước.');$('help').textContent='🤖 Đang xử lý...';try{const d=await api('/api/troubleshoot',{problem:p,dish:state.recipe?.name||'',current_step:state.step});$('help').innerHTML='<b>'+esc(d.message)+'</b><ul>'+d.actions.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul><small>'+esc(d.caution)+'</small>'}catch(e){$('help').textContent=e.message}}
+async function troubleshoot(){const p=$('problem').value.trim();if(!p)return alert('Hãy mô tả sự cố trước.');$('help').textContent='Đang tìm cách xử lý...';try{const d=await api('/api/troubleshoot',{problem:p,dish:state.recipe?.name||'',current_step:state.step});$('help').innerHTML='<b>'+esc(d.message)+'</b><ul>'+d.actions.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul><small>'+esc(d.caution)+'</small>'}catch(e){$('help').textContent=e.message}}
 </script>
 </body>
 </html>
